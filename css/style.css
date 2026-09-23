@@ -1104,6 +1104,52 @@ html.dark-theme .anatomy-point-tag span.pin-sparkle {
   color: inherit;
 }
 
+/* Badge de Numeração correspondente ao Mapa */
+.anatomy-point-tag .pin-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 9999px;
+  background-color: #7E22CE;
+  color: #FFFFFF;
+  border: 1px solid #D4AF37;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: all 200ms ease;
+}
+
+.anatomy-point-tag:hover .pin-num {
+  background-color: #FFFFFF;
+  color: #7E22CE;
+  border-color: #FFFFFF;
+}
+
+html.dark-theme .anatomy-point-tag .pin-num {
+  background-color: #7E22CE;
+  color: #FFFFFF;
+  border-color: #D4AF37;
+}
+
+html.dark-theme .anatomy-point-tag:hover .pin-num {
+  background-color: #09090B;
+  color: #D4AF37;
+  border-color: #09090B;
+}
+
+.map-pin-item {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.map-pin-item:hover {
+  filter: brightness(1.25);
+}
+
 /* Mobile Tabs */
 .anatomy-tab-btn {
   font-family: var(--font-serif);

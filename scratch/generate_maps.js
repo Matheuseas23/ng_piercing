@@ -450,3 +450,4 @@ fs.writeFileSync('img/mapa-boca.svg', generateMouthSVG());
 fs.writeFileSync('img/mapa-facial.svg', generateFaceSVG());
 
 console.log('Saved all 3 SVG maps with identical backgrounds and numbers/arrows!');
+
