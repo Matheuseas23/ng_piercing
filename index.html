@@ -303,30 +303,254 @@
     <!-- ==========================================================================
          HERO SECTION EDITORIAL (Luz natural, textura de linho e travertino)
          ========================================================================== -->
-    <section id="inicio" class="relative overflow-hidden py-12 sm:py-16 md:py-24 border-b border-stone-200/80 dark:border-stone-800/80 bg-gradient-to-b from-stone-50/50 to-transparent dark:from-stone-900/20">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 sm:space-y-6">
+    <!-- ==========================================================================
+         GUIA VISUAL INTERATIVO DE PERFURAÇÕES (MAPAS ANATÔMICOS)
+         ========================================================================== -->
+    <section id="inicio" class="relative overflow-hidden py-10 sm:py-16 md:py-20 border-b border-stone-200/80 dark:border-stone-800/80 bg-gradient-to-b from-stone-50/60 to-transparent dark:from-stone-950/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="space-y-0.5 sm:space-y-1">
-          <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-[0.08em] text-stone-900 dark:text-stone-100 leading-[1.2] uppercase">
-            PIERCINGS QUE ELEVAM
+        <!-- Cabeçalho Editorial do Guia -->
+        <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <span class="text-purple-700 dark:text-purple-400 text-[11px] sm:text-xs uppercase tracking-[0.28em] font-medium block">
+            Guia de Perfurações & Visagismo
+          </span>
+          <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl uppercase tracking-[0.12em] font-normal text-stone-900 dark:text-stone-100 mt-2">
+            Mapas Anatômicos de Piercing
           </h1>
-          <p class="font-script text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-purple-700 dark:text-purple-400 -mt-1 sm:-mt-2 transform -rotate-1">
-            sua essência
+          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 mt-2 font-light leading-relaxed">
+            Selecione o ponto anatômico desejado para explorar as joias biocompatíveis em Titânio e Aço ideais para cada perfuração.
           </p>
         </div>
 
-        <p class="text-stone-600 dark:text-stone-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
-          Joias exclusivas em Titânio e Aço Cirúrgico para quem valoriza estilo, brilho e conforto. Atendimento personalizado com hora marcada em nosso estúdio em São Paulo.
-        </p>
+        <!-- Abas Mobile (Visível em telas menores que lg) -->
+        <div class="flex lg:hidden items-center justify-center gap-1.5 mb-6 p-1 rounded-xl bg-stone-200/60 dark:bg-stone-900 border border-stone-300/60 dark:border-stone-800 max-w-sm mx-auto">
+          <button type="button" onclick="switchAnatomyTab('boca')" id="tabBtn-boca" class="anatomy-tab-btn flex-1 py-2 px-3 rounded-lg text-xs font-serif tracking-wider transition text-stone-600 dark:text-stone-400">
+            👄 Boca
+          </button>
+          <button type="button" onclick="switchAnatomyTab('orelha')" id="tabBtn-orelha" class="anatomy-tab-btn active flex-1 py-2 px-3 rounded-lg text-xs font-serif tracking-wider transition font-medium">
+            👂 Orelha
+          </button>
+          <button type="button" onclick="switchAnatomyTab('facial')" id="tabBtn-facial" class="anatomy-tab-btn flex-1 py-2 px-3 rounded-lg text-xs font-serif tracking-wider transition text-stone-600 dark:text-stone-400">
+            ✨ Facial
+          </button>
+        </div>
 
-        <!-- Ações e Citação (Empilhamento Fluido em Telas Pequenas) -->
-        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <a href="#catalogo" class="btn-gold w-full sm:w-auto text-center">
-            <span>VER CATÁLOGO COMPLETO</span>
+        <!-- Grade de 3 Cards Anatômicos (Lado a lado no Desktop, Abas no Mobile) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch pt-4">
+          
+          <!-- ==========================================
+               CARD 1: MAPA DA BOCA
+               ========================================== -->
+          <div id="anatomyCard-boca" class="anatomy-card hidden lg:flex flex-col justify-between">
+            <div>
+              <div class="mb-4">
+                <span class="text-[10px] tracking-[0.25em] text-purple-700 dark:text-purple-400 uppercase font-medium block">
+                  Região Perioral
+                </span>
+                <h2 class="font-serif text-lg sm:text-xl font-normal tracking-[0.08em] text-stone-900 dark:text-stone-100 mt-0.5">
+                  Mapa da Boca
+                </h2>
+              </div>
+
+              <!-- Imagem Anatômica em Alta Resolução -->
+              <div class="anatomy-img-container mb-4">
+                <img 
+                  src="img/mapa-boca.jpg" 
+                  alt="Guia Anatômico de Perfurações na Boca e Lábios" 
+                  loading="lazy" 
+                />
+              </div>
+
+              <!-- Pontos / Tags Interativas -->
+              <div class="space-y-2">
+                <span class="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 block font-medium">
+                  Selecione para filtrar no catálogo:
+                </span>
+                <div class="flex flex-wrap gap-1.5">
+                  <button type="button" onclick="filtrarPontoAnatomico('boca', 'medusa')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Medusa
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('boca', 'monroe')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Monroe
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('boca', 'madonna')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Madonna
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('boca', 'central-labret')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Central Labret
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('boca', 'vertical-labret')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Vertical Labret
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('boca', 'snake-bites')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Snake Bites
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('boca', 'ashley')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Ashley
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('boca', 'dahlia-bites')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Dahlia Bites
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-stone-200/60 dark:border-stone-800 flex items-center justify-between text-[11px] text-stone-500 dark:text-stone-400">
+              <span>8 perfurações mapeadas</span>
+              <button type="button" onclick="filtrarPontoAnatomico('boca', null)" class="text-purple-700 dark:text-purple-400 font-medium hover:underline">
+                Ver todas da boca →
+              </button>
+            </div>
+          </div>
+
+          <!-- ==========================================
+               CARD 2: MAPA DA ORELHA (DESTAQUE CENTRAL)
+               ========================================== -->
+          <div id="anatomyCard-orelha" class="anatomy-card anatomy-card-highlight flex flex-col justify-between">
+            <span class="anatomy-badge-destaque">
+              ✦ Mais Procurado ✦
+            </span>
+
+            <div>
+              <div class="mb-4">
+                <span class="text-[10px] tracking-[0.25em] text-purple-700 dark:text-purple-400 uppercase font-medium block">
+                  Cartilagens & Lóbulo
+                </span>
+                <h2 class="font-serif text-lg sm:text-xl font-normal tracking-[0.08em] text-stone-900 dark:text-stone-100 mt-0.5">
+                  Mapa da Orelha
+                </h2>
+              </div>
+
+              <!-- Imagem Anatômica em Alta Resolução -->
+              <div class="anatomy-img-container mb-4">
+                <img 
+                  src="img/mapa-orelha.jpg" 
+                  alt="Guia Anatômico Auricular de Perfurações na Orelha" 
+                  loading="lazy" 
+                />
+              </div>
+
+              <!-- Pontos / Tags Interativas -->
+              <div class="space-y-2">
+                <span class="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 block font-medium">
+                  Selecione para filtrar no catálogo:
+                </span>
+                <div class="flex flex-wrap gap-1.5">
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'flat')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Flat
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'rook')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Rook
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'forward-helix')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Forward Helix
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'daith')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Daith
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'tragus')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Tragus
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'minions')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Minions
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'lobulo')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Lóbulos
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'helix')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Hélix
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'midi-helix')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Mid Hélix
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'conch')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Conch
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('orelha', 'transversal')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Transversal
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-stone-200/60 dark:border-stone-800 flex items-center justify-between text-[11px] text-stone-500 dark:text-stone-400">
+              <span>11 perfurações mapeadas</span>
+              <button type="button" onclick="filtrarPontoAnatomico('orelha', null)" class="text-purple-700 dark:text-purple-400 font-medium hover:underline">
+                Ver todas da orelha →
+              </button>
+            </div>
+          </div>
+
+          <!-- ==========================================
+               CARD 3: MAPA FACIAL
+               ========================================== -->
+          <div id="anatomyCard-facial" class="anatomy-card hidden lg:flex flex-col justify-between">
+            <div>
+              <div class="mb-4">
+                <span class="text-[10px] tracking-[0.25em] text-purple-700 dark:text-purple-400 uppercase font-medium block">
+                  Nasal & Rosto
+                </span>
+                <h2 class="font-serif text-lg sm:text-xl font-normal tracking-[0.08em] text-stone-900 dark:text-stone-100 mt-0.5">
+                  Mapa Facial
+                </h2>
+              </div>
+
+              <!-- Imagem Anatômica em Alta Resolução -->
+              <div class="anatomy-img-container mb-4">
+                <img 
+                  src="img/mapa-facial.jpg" 
+                  alt="Guia Anatômico de Perfurações Faciais e Nasais" 
+                  loading="lazy" 
+                />
+              </div>
+
+              <!-- Pontos / Tags Interativas -->
+              <div class="space-y-2">
+                <span class="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 block font-medium">
+                  Selecione para filtrar no catálogo:
+                </span>
+                <div class="flex flex-wrap gap-1.5">
+                  <button type="button" onclick="filtrarPontoAnatomico('nariz', 'aba-nasal')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Aba Nasal
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('nariz', 'septo')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Septo
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('faciais', 'sobrancelha')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Sobrancelha
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('faciais', 'bridge')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Bridge
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('faciais', 'microdermal')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Microdermal
+                  </button>
+                  <button type="button" onclick="filtrarPontoAnatomico('faciais', 'surface')" class="anatomy-point-tag">
+                    <span class="pin-sparkle">✦</span> Surface
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-stone-200/60 dark:border-stone-800 flex items-center justify-between text-[11px] text-stone-500 dark:text-stone-400">
+              <span>6 perfurações mapeadas</span>
+              <button type="button" onclick="filtrarPontoAnatomico('faciais', null)" class="text-purple-700 dark:text-purple-400 font-medium hover:underline">
+                Ver todas faciais →
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Ações e Conversão Abaixo dos 3 Mapas -->
+        <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 max-w-xl mx-auto">
+          <a href="#catalogo" onclick="setRegiaoFilter('todas')" class="btn-gold w-full sm:w-auto text-center px-8 py-3.5 flex items-center justify-center gap-2">
+            <span>EXPLORAR JOIAS NO CATÁLOGO</span>
             <span>➔</span>
           </a>
-          <a href="#materiais" class="btn-outline-gold w-full sm:w-auto text-center">
-            Conhecer os Metais
+          <a href="https://wa.me/5511954107870?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20uma%20perfura%C3%A7%C3%A3o%20e%20agendar%20um%20hor%C3%A1rio%20no%20est%C3%BAdio." target="_blank" rel="noopener noreferrer" class="btn-outline-gold w-full sm:w-auto text-center px-8 py-3.5 flex items-center justify-center gap-2">
+            <span>💬</span>
+            <span>AGENDAR NO WHATSAPP</span>
           </a>
         </div>
 
