@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NG Piercing Joias — Joias em Titânio & Aço Cirúrgico</title>
+  
+  <!-- SEO & Metatags -->
+  <meta name="description" content="Joias nobres para body piercing em Titânio e Aço Cirúrgico com pedrarias e acabamento impecável. Perfurações no estúdio com hora marcada em São Paulo." />
+  <meta name="keywords" content="piercing de luxo, joias de titânio, titânio astm f-136, piercing são paulo, capão redondo, piercing conch, argola cravejada, labret zircônia" />
+  <meta name="author" content="NG Piercing Joias" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NG Piercing — Alta Joalheria Corporal" />
+  <meta property="og:description" content="Joias de alta biocompatibilidade para quem valoriza elegância, segurança e autenticidade." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo-icone.png" type="image/png" />
+
+  <!-- Tipografia de Alta Joalheria: Cinzel, Montserrat & Pinyon Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '.dark-theme'],
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cinzel', 'Georgia', 'serif'],
+            sans: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            script: ['Pinyon Script', 'cursive'],
+          },
+          colors: {
+            alabaster: '#FAFAF9',
+            graphite: '#09090B',
+            purpleSecondary: {
+              DEFAULT: '#7E22CE',
+              dark: '#581C87',
+              light: '#9333EA',
+              accent: '#A855F7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Customizados & Tipografia Editorial -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="top" class="min-h-screen flex flex-col antialiased selection:bg-purple-200 selection:text-purple-900 dark:selection:bg-purple-900/60 dark:selection:text-purple-100">
+
+  <!-- ==========================================================================
+       CABEÇALHO EDITORIAL
+       ========================================================================== -->
+  <header class="sticky top-0 z-50 header-glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4">
+      
+      <!-- Botão Menu / Gaveta Anatômica -->
+      <button id="navDrawerOpenBtn" class="p-2 -ml-2 text-stone-700 dark:text-stone-300 hover:text-purple-700 dark:hover:text-purple-400 transition flex items-center" aria-label="Abrir menu de navegação e anatomia">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Logotipo Oficial (Símbolo da Piercer & Tipografia Oficial) -->
+      <a href="#top" class="brand-logo-container group" aria-label="NG Piercing - Início">
+        <div class="brand-logo-icon">
+          <img 
+            src="img/logo-icone.png" 
+            alt="NG Piercing - Símbolo da Piercer" 
+          />
+        </div>
+        <div class="flex items-center">
+          <img 
+            src="img/logo-texto-dark.png" 
+            alt="NG Piercing Body Piercing" 
+            class="brand-logo-text brand-logo-text--light" 
+          />
+          <img 
+            src="img/logo-texto-white.png" 
+            alt="NG Piercing Body Piercing" 
+            class="brand-logo-text brand-logo-text--dark" 
+          />
+        </div>
+      </a>
+
+      <!-- Menu de Navegação Desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-[0.16em] font-medium text-stone-700 dark:text-stone-300">
+        <a href="#inicio" class="hover:text-purple-700 dark:hover:text-purple-400 transition">Início</a>
+        <a href="#catalogo" class="hover:text-purple-700 dark:hover:text-purple-400 transition">Catálogo</a>
+        <a href="#materiais" class="hover:text-purple-700 dark:hover:text-purple-400 transition">Materiais</a>
+        <a href="#sobre" class="hover:text-purple-700 dark:hover:text-purple-400 transition">Sobre</a>
+        <a href="#contato" class="hover:text-purple-700 dark:hover:text-purple-400 transition">Contato</a>
+      </nav>
+
+      <!-- Barra Utilitária (Busca, Alternador de Tema com Tooltip e Sacola) -->
+      <div class="flex items-center gap-2.5 sm:gap-4">
+        
+        <!-- Input de Busca Rápida (Desktop) -->
+        <div class="relative hidden sm:block w-44 md:w-56">
+          <input 
+            type="text" 
+            placeholder="Buscar joia, metal..." 
+            class="search-input w-full bg-stone-100 dark:bg-stone-900/80 border border-stone-200 dark:border-stone-800 rounded-full py-1.5 pl-8 pr-3 text-xs text-stone-900 dark:text-stone-100 placeholder-stone-400 focus:outline-none focus:border-purple-600 dark:focus:border-purple-400 transition font-sans"
+          />
+          <svg class="w-3.5 h-3.5 text-stone-400 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+
+        <!-- Alternador de Tema + Tooltip Convidativo -->
+        <div class="relative">
+          <button class="theme-toggle-btn p-2 rounded-full text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition" aria-label="Alternar tema claro/escuro" title="Alternar atmosfera visual">
+            <!-- Ícone Sol (aparece no modo escuro) -->
+            <svg class="theme-icon-sun w-5 h-5 hidden text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- Ícone Lua (aparece no modo claro) -->
+            <svg class="theme-icon-moon w-5 h-5 block text-stone-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <!-- Tooltip de Boas-Vindas do Tema Escuro -->
+          <div id="themeOnboardingTooltip" class="theme-tooltip" style="display: none;">
+            <div class="flex items-center gap-2">
+              <span class="text-sm">✨</span>
+              <p class="text-[11px] font-medium leading-tight">Experimente a atmosfera no <strong>Modo Noturno</strong></p>
+            </div>
+            <button id="closeThemeTooltipBtn" class="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 text-xs p-1" title="Fechar dica">
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Botão Sacola de Compras com Contador Reativo -->
+        <button data-open-cart class="relative p-2 text-stone-700 dark:text-stone-300 hover:text-purple-700 dark:hover:text-purple-400 transition flex items-center" aria-label="Abrir Sacola de Compras">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="cart-badge absolute -top-1 -right-1 bg-purple-700 text-white text-[10px] font-medium w-4 h-4 rounded-full items-center justify-center leading-none" style="display: none;">
+            0
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- DRAWER LATERAL DE NAVEGAÇÃO & ANATOMIA DE PIERCING -->
+  <div id="navDrawerOverlay" class="drawer-overlay">
+    <div id="navDrawerContent" class="nav-drawer-content">
+      
+      <!-- Topo do Drawer -->
+      <div class="p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50/50 dark:bg-stone-900/50">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden bg-black border border-purple-500/30 flex-shrink-0 flex items-center justify-center shadow-sm">
+            <img src="img/logo-icone.png" alt="NG Piercing" class="w-full h-full object-contain" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-base font-medium tracking-[0.16em] text-stone-900 dark:text-stone-100 leading-tight">NG PIERCING</span>
+            <span class="text-[9px] tracking-[0.35em] text-purple-700 dark:text-purple-400 uppercase font-medium">BODY PIERCING</span>
+          </div>
+        </div>
+        <button id="closeNavDrawerBtn" class="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 p-1.5 transition" aria-label="Fechar menu">
+          ✕
+        </button>
+      </div>
+
+      <!-- Conteúdo do Drawer com Scroll -->
+      <div class="flex-1 overflow-y-auto p-5 space-y-6">
+        
+        <!-- Busca no Drawer -->
+        <div class="relative">
+          <input 
+            type="text" 
+            placeholder="Buscar joia ou local anatômico..." 
+            class="search-input w-full bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg py-2 pl-8 pr-3 text-xs text-stone-900 dark:text-stone-100 placeholder-stone-400 focus:outline-none focus:border-purple-600 dark:focus:border-purple-400 font-sans"
+          />
+          <svg class="w-3.5 h-3.5 text-stone-400 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+
+        <!-- Links Principais -->
+        <nav class="grid grid-cols-2 gap-2 text-xs font-medium tracking-wider uppercase text-stone-700 dark:text-stone-300">
+          <a href="#inicio" onclick="fecharNavDrawer()" class="p-2 rounded-lg bg-stone-50 dark:bg-stone-900/70 border border-stone-200 dark:border-stone-800 hover:text-purple-700 dark:hover:text-purple-400 text-center transition">Início</a>
+          <a href="#catalogo" onclick="fecharNavDrawer(); setRegiaoFilter('todas');" class="p-2 rounded-lg bg-stone-50 dark:bg-stone-900/70 border border-stone-200 dark:border-stone-800 hover:text-purple-700 dark:hover:text-purple-400 text-center transition">Catálogo</a>
+          <a href="#materiais" onclick="fecharNavDrawer()" class="p-2 rounded-lg bg-stone-50 dark:bg-stone-900/70 border border-stone-200 dark:border-stone-800 hover:text-purple-700 dark:hover:text-purple-400 text-center transition">Metais</a>
+          <a href="#sobre" onclick="fecharNavDrawer()" class="p-2 rounded-lg bg-stone-50 dark:bg-stone-900/70 border border-stone-200 dark:border-stone-800 hover:text-purple-700 dark:hover:text-purple-400 text-center transition">O Estúdio</a>
+        </nav>
+
+        <!-- SEÇÕES ANATÔMICAS ORGANIZADAS (BODY PIERCING REAL) -->
+        <div class="space-y-4 pt-2 border-t border-stone-200 dark:border-stone-800">
+          <span class="text-[11px] uppercase tracking-widest text-purple-700 dark:text-purple-400 font-semibold block">
+            Catálogo por Anatomia Corporal
+          </span>
+
+          <!-- 1. Orelha -->
+          <div class="border border-stone-200 dark:border-stone-800 rounded-xl overflow-hidden bg-white dark:bg-stone-900/40">
+            <button onclick="drawerFiltrarRegiao('orelha')" class="drawer-nav-item">
+              <span class="flex items-center gap-2 font-medium">
+                <span>👂</span>
+                <span>Orelha</span>
+              </span>
+              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Ver todas</span>
+            </button>
+            <div class="px-3 pb-3 pt-1 flex flex-wrap gap-1.5 border-t border-stone-100 dark:border-stone-800/60 bg-stone-50/50 dark:bg-stone-950/20">
+              <button onclick="drawerFiltrarSublocal('orelha', 'flat')" class="drawer-sublink">Flat</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'anti-helix')" class="drawer-sublink">Anti-hélix</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'hidden-helix')" class="drawer-sublink">Hidden Hélix</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'helix')" class="drawer-sublink">Hélix</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'rook')" class="drawer-sublink">Rook</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'daith')" class="drawer-sublink">Daith</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'tragus')" class="drawer-sublink">Tragus</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'lobulo')" class="drawer-sublink">Lóbulo</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'conch')" class="drawer-sublink">Conch</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'midi-helix')" class="drawer-sublink">Midi-hélix</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'transversal')" class="drawer-sublink">Transversal</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'australianos')" class="drawer-sublink">Australianos</button>
+              <button onclick="drawerFiltrarSublocal('orelha', 'minions')" class="drawer-sublink">Minions</button>
+            </div>
+          </div>
+
+          <!-- 2. Nariz -->
+          <div class="border border-stone-200 dark:border-stone-800 rounded-xl overflow-hidden bg-white dark:bg-stone-900/40">
+            <button onclick="drawerFiltrarRegiao('nariz')" class="drawer-nav-item">
+              <span class="flex items-center gap-2 font-medium">
+                <span>👃</span>
+                <span>Nariz</span>
+              </span>
+              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Ver todas</span>
+            </button>
+            <div class="px-3 pb-3 pt-1 flex flex-wrap gap-1.5 border-t border-stone-100 dark:border-stone-800/60 bg-stone-50/50 dark:bg-stone-950/20">
+              <button onclick="drawerFiltrarSublocal('nariz', 'aba-nasal')" class="drawer-sublink">Aba Nasal</button>
+              <button onclick="drawerFiltrarSublocal('nariz', 'septo')" class="drawer-sublink">Septo</button>
+            </div>
+          </div>
+
+          <!-- 3. Boca -->
+          <div class="border border-stone-200 dark:border-stone-800 rounded-xl overflow-hidden bg-white dark:bg-stone-900/40">
+            <button onclick="drawerFiltrarRegiao('boca')" class="drawer-nav-item">
+              <span class="flex items-center gap-2 font-medium">
+                <span>👄</span>
+                <span>Boca</span>
+              </span>
+              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Ver todas</span>
+            </button>
+            <div class="px-3 pb-3 pt-1 flex flex-wrap gap-1.5 border-t border-stone-100 dark:border-stone-800/60 bg-stone-50/50 dark:bg-stone-950/20">
+              <button onclick="drawerFiltrarSublocal('boca', 'medusa')" class="drawer-sublink">Medusa</button>
+              <button onclick="drawerFiltrarSublocal('boca', 'labret-lateral')" class="drawer-sublink">Labret Lateral</button>
+              <button onclick="drawerFiltrarSublocal('boca', 'labret')" class="drawer-sublink">Labret</button>
+              <button onclick="drawerFiltrarSublocal('boca', 'vertical-labret')" class="drawer-sublink">Vertical Labret</button>
+              <button onclick="drawerFiltrarSublocal('boca', 'monroe')" class="drawer-sublink">Monroe</button>
+              <button onclick="drawerFiltrarSublocal('boca', 'madonna')" class="drawer-sublink">Madonna</button>
+              <button onclick="drawerFiltrarSublocal('boca', 'snake-bites')" class="drawer-sublink">Snake Bites</button>
+              <button onclick="drawerFiltrarSublocal('boca', 'angel-fangs')" class="drawer-sublink">Angel Fangs</button>
+              <button onclick="drawerFiltrarSublocal('boca', 'lingua')" class="drawer-sublink">Língua</button>
+            </div>
+          </div>
+
+          <!-- 4. Faciais -->
+          <div class="border border-stone-200 dark:border-stone-800 rounded-xl overflow-hidden bg-white dark:bg-stone-900/40">
+            <button onclick="drawerFiltrarRegiao('faciais')" class="drawer-nav-item">
+              <span class="flex items-center gap-2 font-medium">
+                <span>✨</span>
+                <span>Faciais</span>
+              </span>
+              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Ver todas</span>
+            </button>
+            <div class="px-3 pb-3 pt-1 flex flex-wrap gap-1.5 border-t border-stone-100 dark:border-stone-800/60 bg-stone-50/50 dark:bg-stone-950/20">
+              <button onclick="drawerFiltrarSublocal('faciais', 'microdermal')" class="drawer-sublink">Microdermal</button>
+              <button onclick="drawerFiltrarSublocal('faciais', 'surface')" class="drawer-sublink">Surface</button>
+              <button onclick="drawerFiltrarSublocal('faciais', 'bridge')" class="drawer-sublink">Bridge</button>
+              <button onclick="drawerFiltrarSublocal('faciais', 'sobrancelha')" class="drawer-sublink">Sobrancelha</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Rodapé do Drawer -->
+      <div class="p-5 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900 text-xs">
+        <p class="font-medium text-stone-800 dark:text-stone-200 font-serif">Atendimento com Hora Marcada</p>
+        <p class="mt-0.5 text-stone-500 dark:text-stone-400">Terça a Sábado das 13h às 18h (Capão Redondo / SP)</p>
+        <a href="https://wa.me/5511954107870" target="_blank" rel="noopener noreferrer" class="text-purple-700 dark:text-purple-400 mt-2 font-medium flex items-center gap-1.5 hover:underline">
+          <span>💬</span>
+          <span>WhatsApp Oficial: (11) 95410-7870</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <main class="flex-grow">
+    <!-- ==========================================================================
+         HERO SECTION EDITORIAL (Luz natural, textura de linho e travertino)
+         ========================================================================== -->
+    <section id="inicio" class="relative overflow-hidden py-12 sm:py-16 md:py-24 border-b border-stone-200/80 dark:border-stone-800/80 bg-gradient-to-b from-stone-50/50 to-transparent dark:from-stone-900/20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 sm:space-y-6">
+        
+        <div class="space-y-0.5 sm:space-y-1">
+          <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-[0.08em] text-stone-900 dark:text-stone-100 leading-[1.2] uppercase">
+            PIERCINGS QUE ELEVAM
+          </h1>
+          <p class="font-script text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-purple-700 dark:text-purple-400 -mt-1 sm:-mt-2 transform -rotate-1">
+            sua essência
+          </p>
+        </div>
+
+        <p class="text-stone-600 dark:text-stone-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Joias exclusivas em Titânio e Aço Cirúrgico para quem valoriza estilo, brilho e conforto. Atendimento personalizado com hora marcada em nosso estúdio em São Paulo.
+        </p>
+
+        <!-- Ações e Citação (Empilhamento Fluido em Telas Pequenas) -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a href="#catalogo" class="btn-gold w-full sm:w-auto text-center">
+            <span>VER CATÁLOGO COMPLETO</span>
+            <span>➔</span>
+          </a>
+          <a href="#materiais" class="btn-outline-gold w-full sm:w-auto text-center">
+            Conhecer os Metais
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         RÉGUA DE BENEFÍCIOS (3 PILARES DE CONFIANÇA)
+         ========================================================================== -->
+    <section class="py-8 bg-stone-100/60 dark:bg-stone-900/40 border-b border-stone-200 dark:border-stone-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-stone-200 dark:divide-stone-800">
+          
+          <!-- Pilar 1: Envio Cuidadoso -->
+          <div class="flex items-start gap-3.5 pt-4 md:pt-0 md:px-4 first:pl-0">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-700 dark:text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xs font-medium uppercase tracking-wider text-stone-900 dark:text-stone-100 font-sans">
+                Envio Cuidadoso
+              </h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">
+                Embalagem higienizada, lacrada individualmente com proteção antichoque.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 2: Compra Confiável -->
+          <div class="flex items-start gap-3.5 pt-4 md:pt-0 md:px-4">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-700 dark:text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xs font-medium uppercase tracking-wider text-stone-900 dark:text-stone-100 font-sans">
+                Compra Confiável
+              </h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">
+                Atendimento transparente e acolhedor direto no WhatsApp com a piercer.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 3: Orientação de Medidas -->
+          <div class="flex items-start gap-3.5 pt-4 md:pt-0 md:px-4">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-700 dark:text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xs font-medium uppercase tracking-wider text-stone-900 dark:text-stone-100 font-sans">
+                Orientação de Medidas
+              </h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">
+                Ajudamos você a escolher o modelo e tamanho ideal para a sua anatomia.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FILTROS POR ANATOMIA REAL DE BODY PIERCING
+         ========================================================================== -->
+    <section class="py-5 sm:py-6 border-b border-stone-200/80 dark:border-stone-800/80 sticky top-18 sm:top-20 bg-stone-50/95 dark:bg-stone-950/95 backdrop-blur-md z-30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex items-center justify-between gap-4 pb-2">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400 font-sans">
+              Regiões Anatômicas:
+            </span>
+            <span id="activeSublocalBadge" class="hidden text-[11px] font-sans px-2.5 py-0.5 rounded-full bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 font-medium border border-purple-200 dark:border-purple-800 items-center gap-1.5">
+              <span id="activeSublocalName"></span>
+              <button onclick="limparSublocalAtivo()" class="hover:text-purple-900 dark:hover:text-purple-100 font-bold" title="Remover filtro de sublocal">✕</button>
+            </span>
+          </div>
+          <span id="vitrineCount" class="text-xs text-purple-700 dark:text-purple-400 font-medium font-sans">
+            Carregando catálogo...
+          </span>
+        </div>
+
+        <!-- Botões Principais das 4 Regiões Anatômicas Reais -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-1">
+          <button class="filter-btn active" data-regiao="todas">Todas as Joias</button>
+          <button class="filter-btn" data-regiao="orelha">👂 Orelha</button>
+          <button class="filter-btn" data-regiao="nariz">👃 Nariz</button>
+          <button class="filter-btn" data-regiao="boca">👄 Boca</button>
+          <button class="filter-btn" data-regiao="faciais">✨ Faciais</button>
+        </div>
+
+        <!-- Chips Dinâmicos de Sublocais Anatômicos -->
+        <div id="sublocaisChipsContainer" class="flex items-center gap-1.5 overflow-x-auto pt-2 pb-1 scrollbar-none">
+          <!-- Inserido dinamicamente via js/main.js quando uma região for selecionada -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VITRINE DINÂMICA (TODAS AS 82 JOIAS)
+         ========================================================================== -->
+    <section id="catalogo" class="py-10 sm:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Barra de Ferramentas de Busca & Filtros Rápidos (Responsivo 2 Colunas Mobile) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8 bg-stone-100/70 dark:bg-stone-900/50 p-3 sm:p-4 rounded-xl border border-stone-200 dark:border-stone-800">
+          
+          <!-- Busca em Tempo Real -->
+          <div class="relative flex-1">
+            <input 
+              id="mainSearchInput"
+              type="text" 
+              placeholder="Pesquisar por joia, metal, local (ex: 'tragus', 'mamilo')..." 
+              class="search-input w-full bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg py-2 pl-9 pr-4 text-xs text-stone-900 dark:text-stone-100 placeholder-stone-400 focus:outline-none focus:border-purple-600 dark:focus:border-purple-400 font-sans"
+            />
+            <svg class="w-4 h-4 text-stone-400 absolute left-3 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+
+          <!-- Filtros de Metal & Ordenação (Lado a lado no mobile) -->
+          <div class="grid grid-cols-2 sm:flex sm:items-center gap-2 sm:gap-3">
+            <select id="materialSelect" class="bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg px-2.5 sm:px-3 py-2 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-purple-600 dark:focus:border-purple-400 font-sans w-full">
+              <option value="todos">Todos Metais</option>
+              <option value="Titânio">Titânio ASTM F-136</option>
+              <option value="Aço Cirúrgico">Aço Cirúrgico</option>
+              <option value="Prata 925">Prata 925</option>
+              <option value="Banhado a Ouro">Banhado a Ouro</option>
+            </select>
+
+            <select id="sortSelect" class="bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-lg px-2.5 sm:px-3 py-2 text-xs text-stone-800 dark:text-stone-200 focus:outline-none focus:border-purple-600 dark:focus:border-purple-400 font-sans w-full">
+              <option value="padrao">Padrão</option>
+              <option value="destaques">Destaques</option>
+              <option value="preco-asc">Menor Preço</option>
+              <option value="preco-desc">Maior Preço</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- SELO INFORMATIVO OBRIGATÓRIO (CAIXA ALTA) -->
+        <div class="mb-6 sm:mb-8 p-3.5 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl flex items-center justify-between flex-wrap gap-2 text-xs text-stone-800 dark:text-stone-300">
+          <div class="flex items-center gap-2.5">
+            <span class="text-base">⚠️</span>
+            <span class="font-medium font-sans text-[11px] sm:text-xs tracking-wide">VALOR DA PEÇA AVULSA. PERFURAÇÃO NÃO INCLUSA (PROCEDIMENTO REALIZADO À PARTE NO ESTÚDIO EM SP COM HORA MARCADA).</span>
+          </div>
+        </div>
+
+        <!-- Grid de Produtos da Coleção (82 Peças - 2 Colunas Mobile) -->
+        <div id="vitrineGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+          <!-- Renderizado dinamicamente via js/main.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO EDUCATIVA DE MATERIAIS
+         ========================================================================== -->
+    <section id="materiais" class="py-16 md:py-24 bg-stone-100/60 dark:bg-stone-900/30 border-y border-stone-200 dark:border-stone-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-purple-700 dark:text-purple-400 text-xs uppercase tracking-widest font-medium">
+            Qualidade & Durabilidade
+          </span>
+          <h2 class="font-sans text-2xl sm:text-3xl uppercase tracking-[0.16em] font-medium text-stone-900 dark:text-stone-100 mt-2">
+            Os Metais que Tocam Sua Pele
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 mt-3 leading-relaxed">
+            A boa adaptação da sua joia depende da qualidade e pureza do material. Selecionamos peças em titânio e aço cirúrgico para você usar com conforto total todos os dias.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          
+          <!-- Card Titânio ASTM F-136 -->
+          <div class="bg-white dark:bg-stone-900 p-8 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-700 dark:text-purple-400 flex items-center justify-center mb-6 font-serif font-medium text-lg border border-purple-500/20">
+                Ti
+              </div>
+              <h3 class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">Titânio ASTM F-136</h3>
+              <span class="text-[11px] text-purple-700 dark:text-purple-400 font-medium uppercase tracking-wider block mt-1">Material Hipoalergênico</span>
+              <p class="text-xs text-stone-600 dark:text-stone-400 mt-4 leading-relaxed">
+                Totalmente livre de níquel, muito mais leve que o aço e 100% seguro. Não oxida, não escurece e é a melhor escolha para quem tem pele sensível ou alergias.
+              </p>
+            </div>
+            <ul class="mt-6 pt-6 border-t border-stone-100 dark:border-stone-800 text-xs space-y-2 text-stone-500 dark:text-stone-400">
+              <li>✓ Não oxida nem escurece com o tempo</li>
+              <li>✓ Rosca interna suave que não machuca</li>
+              <li>✓ Perfeito para uso diário contínuo</li>
+            </ul>
+          </div>
+
+          <!-- Card Aço Cirúrgico 316L -->
+          <div class="bg-white dark:bg-stone-900 p-8 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center justify-center mb-6 font-serif font-medium text-lg border border-stone-300 dark:border-stone-700">
+                Fe
+              </div>
+              <h3 class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">Aço Cirúrgico 316L</h3>
+              <span class="text-[11px] text-stone-500 dark:text-stone-400 font-medium uppercase tracking-wider block mt-1">Brilho Espelhado & Resistência</span>
+              <p class="text-xs text-stone-600 dark:text-stone-400 mt-4 leading-relaxed">
+                Metal resistente com polimento espelhado clássico. Apresenta alta durabilidade e brilho prateado vivo, com excelente custo-benefício para compor mixes em furos cicatrizados.
+              </p>
+            </div>
+            <ul class="mt-6 pt-6 border-t border-stone-100 dark:border-stone-800 text-xs space-y-2 text-stone-500 dark:text-stone-400">
+              <li>✓ Polimento de alto brilho reflexivo</li>
+              <li>✓ Excelente custo-benefício em joias</li>
+              <li>✓ Perfeito para trocas do dia a dia</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         STORYTELLING INSTITUCIONAL ("SOBRE O ESTÚDIO")
+         ========================================================================== -->
+    <section id="sobre" class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          
+          <!-- Card Institucional de Atendimento & Biossegurança -->
+          <div class="lg:col-span-5 bg-white dark:bg-stone-900/90 p-8 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-800 dark:text-purple-300 text-[11px] uppercase tracking-widest font-medium mb-4">
+                <span>✧</span>
+                <span>Atendimento Individualizado</span>
+              </div>
+              <h3 class="font-sans text-2xl font-medium uppercase tracking-[0.16em] text-stone-900 dark:text-stone-100">Perfuração</h3>
+              <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Ambiente privativo com rigor cirúrgico</p>
+            </div>
+
+            <div class="space-y-3 text-xs text-stone-600 dark:text-stone-300 border-y border-stone-100 dark:border-stone-800/80 py-4">
+              <div class="flex items-start gap-2.5">
+                <span class="text-purple-600 dark:text-purple-400 text-sm">📍</span>
+                <div>
+                  <strong class="text-stone-800 dark:text-stone-200">Localização:</strong>
+                  <p class="text-stone-500 dark:text-stone-400">Capão Redondo — Zona Sul, São Paulo - SP</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-purple-600 dark:text-purple-400 text-sm">🕒</span>
+                <div>
+                  <strong class="text-stone-800 dark:text-stone-200">Horários de Atendimento:</strong>
+                  <p class="text-stone-500 dark:text-stone-400">Terça a Sábado das 13h às 18h</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-purple-600 dark:text-purple-400 text-sm">📅</span>
+                <div>
+                  <strong class="text-stone-800 dark:text-stone-200">Agendamento:</strong>
+                  <p class="text-purple-700 dark:text-purple-400 font-medium">Somente com hora marcada</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3.5 bg-purple-50 dark:bg-purple-950/40 rounded-xl border border-purple-200/80 dark:border-purple-800/60 text-xs">
+              <p class="text-purple-900 dark:text-purple-200 font-medium leading-relaxed">
+                ⚠️ <em>VALOR DA PEÇA AVULSA. PERFURAÇÃO NÃO INCLUSA (PROCEDIMENTO REALIZADO À PARTE NO ESTÚDIO EM SP COM HORA MARCADA).</em>
+              </p>
+            </div>
+          </div>
+
+          <!-- Texto do Storytelling -->
+          <div class="lg:col-span-7 space-y-5 lg:pl-4">
+            <span class="text-purple-700 dark:text-purple-400 text-xs uppercase tracking-widest font-medium">
+              Cuidado, Precisão & Respeito Anatômico
+            </span>
+
+            <h2 class="font-serif text-3xl sm:text-4xl text-stone-900 dark:text-stone-100 font-normal leading-snug">
+              Joalheria Pensada para a Anatomia do Seu Corpo
+            </h2>
+
+            <p class="text-stone-600 dark:text-stone-300 text-xs sm:text-sm leading-relaxed">
+              O estúdio <strong>NG Piercing</strong> nasceu da convicção de que cada orelha e cada corpo carregam uma anatomia singular. Trabalhamos exclusivamente com joias selecionadas a dedo, com acabamento impecável, rosca interna suave e materiais seguros para garantir conforto e durabilidade.
+            </p>
+
+            <p class="text-stone-600 dark:text-stone-300 text-xs sm:text-sm leading-relaxed">
+              Em nosso estúdio no Capão Redondo (Zona Sul de São Paulo), recebemos você com hora marcada para um atendimento acolhedor, calmo e individualizado. Cada procedimento segue rigorosos cuidados de higiene e esterilização, com agulhas descartáveis e todo carinho que você merece.
+            </p>
+
+            <div class="pt-2 flex flex-wrap gap-4 text-xs font-medium text-stone-800 dark:text-stone-200">
+              <div class="flex items-center gap-2">
+                <span class="text-purple-600 dark:text-purple-400">✓</span>
+                <span>Análise Anatômica Personalizada</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-purple-600 dark:text-purple-400">✓</span>
+                <span>Esterilização Rigorosa em Autoclave</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-purple-600 dark:text-purple-400">✓</span>
+                <span>Agulhas Americanas Descartáveis</span>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="https://wa.me/5511954107870?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20joias%20e%20agendamento%20no%20est%C3%BAdio." target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex items-center gap-2">
+                <span>Falar com a Piercer no WhatsApp</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       RODAPÉ MINIMALISTA
+       ========================================================================== -->
+  <footer id="contato" class="bg-stone-900 text-stone-300 dark:bg-black dark:text-stone-400 border-t border-stone-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-stone-800">
+        
+        <!-- Coluna 1: Marca -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden bg-black border border-purple-500/30 flex-shrink-0 flex items-center justify-center shadow-md">
+              <img src="img/logo-icone.png" alt="NG Piercing" class="w-full h-full object-contain" />
+            </div>
+            <img src="img/logo-texto-white.png" alt="NG Piercing Body Piercing" class="h-6 w-auto object-contain" />
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Joalheria corporal em Titânio ASTM F-136 e Aço Cirúrgico. Elegância, precisão e bem-estar.
+          </p>
+          <p class="text-xs text-stone-400">
+            São Paulo - SP (Capão Redondo / Zona Sul)
+          </p>
+        </div>
+
+        <!-- Coluna 2: Navegação Rápida -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-medium uppercase tracking-wider text-white">Navegação</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#inicio" class="hover:text-purple-400 transition">Início</a></li>
+            <li><a href="#catalogo" class="hover:text-purple-400 transition">Coleção de Joias</a></li>
+            <li><a href="#materiais" class="hover:text-purple-400 transition">Guia de Metais</a></li>
+            <li><a href="#sobre" class="hover:text-purple-400 transition">O Estúdio</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Atendimento do Estúdio -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-medium uppercase tracking-wider text-white">Atendimento Presencial</h4>
+          <p class="text-xs text-stone-400">
+            Terça a Sábado das 13h às 18h
+          </p>
+          <p class="text-xs text-purple-300">
+            Somente com hora marcada
+          </p>
+          <p class="text-[11px] text-stone-400 pt-1 font-medium leading-tight">
+            ⚠️ VALOR DA PEÇA AVULSA. PERFURAÇÃO NÃO INCLUSA (PROCEDIMENTO REALIZADO À PARTE NO ESTÚDIO EM SP COM HORA MARCADA).
+          </p>
+        </div>
+
+        <!-- Coluna 4: Canais Oficiais -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-medium uppercase tracking-wider text-white">Canais Oficiais</h4>
+          <div class="space-y-2 text-xs">
+            <a href="https://wa.me/5511954107870" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-stone-300 hover:text-purple-400 transition">
+              <span>💬</span>
+              <span>WhatsApp: (11) 95410-7870</span>
+            </a>
+            <a href="https://instagram.com/ngpiercingstudio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-stone-300 hover:text-purple-400 transition">
+              <span>📷</span>
+              <span>Instagram: @ngpiercingstudio</span>
+            </a>
+          </div>
+          <div class="pt-2">
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-xs text-stone-400 hover:text-white flex items-center gap-1.5 transition">
+              <span>↑ Retornar ao Topo</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright e Créditos -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>© 2026 NG Piercing Joias. Todos os direitos reservados.</p>
+        <p class="text-[11px]">Design Editorial de Alta Joalheria • Pronto para Vercel</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       DRAWER LATERAL DA SACOLA (CHECKOUT WHATSAPP)
+       ========================================================================== -->
+  <div id="cartDrawerOverlay" class="drawer-overlay">
+    <div id="cartDrawerContent" class="drawer-content">
+      
+      <!-- Cabeçalho do Drawer -->
+      <div class="p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50/50 dark:bg-stone-900/50">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-purple-700 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <h3 class="font-serif text-lg font-medium tracking-[0.03em] text-stone-900 dark:text-stone-100">Sua Sacola de Joias</h3>
+        </div>
+        <button id="closeCartBtn" class="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 p-1.5 transition" aria-label="Fechar sacola">
+          ✕
+        </button>
+      </div>
+
+      <!-- Lista de Itens com Scroll -->
+      <div class="flex-1 overflow-y-auto p-5">
+        
+        <!-- Estado Vazio -->
+        <div id="cartEmptyState" class="h-full flex flex-col items-center justify-center text-center py-12" style="display: none;">
+          <div class="w-16 h-16 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-400 text-2xl mb-4">
+            ✧
+          </div>
+          <h4 class="font-serif text-base font-medium tracking-[0.03em] text-stone-800 dark:text-stone-200">Sua sacola está vazia</h4>
+          <p class="text-xs text-stone-500 dark:text-stone-400 max-w-xs mt-1">
+            Explore nossa coleção com 82 peças em titânio e aço cirúrgico para compor seu mix de joias.
+          </p>
+          <a href="#catalogo" onclick="window.cartInstance.closeCart()" class="btn-gold text-xs mt-6">
+            Explorar Catálogo
+          </a>
+        </div>
+
+        <!-- Itens Renderizados -->
+        <div id="cartItemsList" class="space-y-1"></div>
+      </div>
+
+      <!-- Rodapé do Drawer com Subtotal e Checkout WhatsApp -->
+      <div id="cartDrawerFooter" class="p-5 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900">
+        
+        <!-- Checkbox de Agendamento Presencial -->
+        <div class="mb-4 p-3 bg-white dark:bg-stone-950/70 border border-stone-200 dark:border-stone-800 rounded-lg">
+          <label class="flex items-start gap-2.5 cursor-pointer">
+            <input type="checkbox" id="appointmentCheckbox" class="mt-0.5 rounded border-stone-300 text-purple-600 focus:ring-purple-500" />
+            <span class="text-xs text-stone-700 dark:text-stone-300 leading-tight">
+              <strong>Desejo agendar colocação/perfuração no estúdio</strong> (Capão Redondo / SP com hora marcada).
+            </span>
+          </label>
+        </div>
+
+        <!-- Aviso da Joia Avulsa -->
+        <p class="text-[10px] sm:text-[11px] text-purple-700 dark:text-purple-400 font-medium leading-tight mb-3">
+          ⚠️ <em>VALOR DA PEÇA AVULSA. PERFURAÇÃO NÃO INCLUSA (PROCEDIMENTO REALIZADO À PARTE NO ESTÚDIO EM SP COM HORA MARCADA).</em>
+        </p>
+
+        <!-- Subtotal -->
+        <div class="flex items-center justify-between pb-4 border-b border-stone-200 dark:border-stone-800">
+          <span class="text-xs uppercase tracking-wider text-stone-500 dark:text-stone-400 font-medium">Subtotal das Peças:</span>
+          <span id="cartSubtotalAmount" class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">
+            R$ 0,00
+          </span>
+        </div>
+
+        <!-- Botão Finalizar no WhatsApp -->
+        <button id="checkoutWhatsAppBtn" class="btn-gold w-full mt-4 py-3.5 text-xs font-medium tracking-wider">
+          <span>FINALIZAR PEDIDO NO WHATSAPP</span>
+          <span>➔</span>
+        </button>
+
+        <p class="text-[10px] text-center text-stone-400 dark:text-stone-500 mt-2">
+          Você será direcionado para o WhatsApp oficial <strong>(11) 95410-7870</strong>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL QUICK VIEW (DETALHES DA JOIA)
+       ========================================================================== -->
+  <div id="quickViewOverlay" class="modal-overlay">
+    <div class="modal-content relative">
+      <button id="closeQuickViewBtn" class="absolute top-4 right-4 z-20 text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 p-2 rounded-full bg-white/70 dark:bg-stone-800/70 backdrop-blur" aria-label="Fechar detalhes">
+        ✕
+      </button>
+      <div id="quickViewBody">
+        <!-- Preenchido dinamicamente via js/main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTAINER DE TOASTS -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- SCRIPTS MODULARES -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

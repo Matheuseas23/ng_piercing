@@ -1,0 +1,1127 @@
+/* ==========================================================================
+   NG PIERCING JOIAS — ESTILO EDITORIAL DE ALTO LUXO
+   Design System: Alabastro & Grafite com Roxo Nobre Imperial (#7E22CE) & Cinzel/Montserrat
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&display=swap');
+
+:root {
+  /* MODO CLARO (Editorial & Alabastro - Padrão) */
+  --bg-primary: #FAFAF9;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F4F1EA;
+  --bg-glass: rgba(255, 255, 255, 0.88);
+  --bg-card: #FFFFFF;
+  --bg-drawer: #FFFFFF;
+
+  --text-primary: #18181B;
+  --text-secondary: #52525B;
+  --text-muted: #71717A;
+  --text-noble: #6B21A8;
+
+  /* COR SECUNDÁRIA: Roxo Nobre / Imperial Anterior (#7E22CE) */
+  --gold-primary: #7E22CE; 
+  --gold-dark: #581C87;
+  --gold-light: #9333EA;
+  --gold-border: rgba(126, 34, 206, 0.25);
+  --gold-glow: rgba(126, 34, 206, 0.18);
+
+  --purple-primary: #7E22CE;
+  --purple-dark: #581C87;
+  --purple-light: #9333EA;
+  --purple-border: rgba(126, 34, 206, 0.25);
+  --purple-glow: rgba(126, 34, 206, 0.18);
+
+  --accent-lilac: #A855F7;
+  --accent-lilac-soft: #F3E8FF;
+
+  --border-subtle: #E7E5E4;
+  --border-card: rgba(126, 34, 206, 0.12);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.08);
+
+  /* HIERARQUIA TIPOGRÁFICA OFICIAL: CINZEL & MONTSERRAT */
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-script: 'Pinyon Script', cursive;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition-theme: background-color 400ms cubic-bezier(0.16, 1, 0.3, 1),
+                      color 400ms cubic-bezier(0.16, 1, 0.3, 1),
+                      border-color 400ms cubic-bezier(0.16, 1, 0.3, 1),
+                      box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   MODO ESCURO (Atmosfera Noturna & Grafite Profundo com Ametista Luminoso)
+   ========================================================================== */
+html.dark-theme {
+  --bg-primary: #09090B;
+  --bg-secondary: #121016;
+  --bg-tertiary: #191620;
+  --bg-glass: rgba(18, 16, 22, 0.88);
+  --bg-card: #141219;
+  --bg-drawer: #0F0E13;
+
+  --text-primary: #F4F4F5;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+  --text-noble: #E9D5FF;
+
+  /* COR SECUNDÁRIA MODO ESCURO: Ametista Luminoso */
+  --gold-primary: #A855F7;
+  --gold-dark: #7E22CE;
+  --gold-light: #C084FC;
+  --gold-border: rgba(168, 85, 247, 0.35);
+  --gold-glow: rgba(168, 85, 247, 0.22);
+
+  --purple-primary: #A855F7;
+  --purple-dark: #7E22CE;
+  --purple-light: #C084FC;
+  --purple-border: rgba(168, 85, 247, 0.35);
+  --purple-glow: rgba(168, 85, 247, 0.22);
+
+  --accent-lilac: #C084FC;
+  --accent-lilac-soft: #2E1065;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(168, 85, 247, 0.22);
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 35px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: var(--transition-theme);
+}
+
+/* ==========================================================================
+   TIPOGRAFIA CINZEL EDITORIAL (PESO FINO / ELEGANTE - SEM BOLD PESADO)
+   ========================================================================== */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Hierarquia Obrigatória Cinzel */
+h1, .hero-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h2, h3, .section-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.product-title {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.product-price {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+p, span, li, a, input, select, button {
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+strong, b {
+  font-weight: 500;
+}
+
+/* Scrollbar Personalizada */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Transições universais de tema para elementos chave */
+header, nav, section, footer, .card-luxury, .drawer-content, .modal-content, input, select, button {
+  transition: var(--transition-theme);
+}
+
+/* ==========================================================================
+   COMPONENTES DE LUXO
+   ========================================================================== */
+
+/* Navbar e Header */
+.header-glass {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Logotipo Oficial do Cabeçalho */
+.brand-logo-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: #000000;
+  border: 1.5px solid var(--purple-border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.brand-logo-container:hover .brand-logo-icon {
+  border-color: var(--purple-primary);
+  box-shadow: 0 4px 14px var(--purple-glow);
+  transform: scale(1.05);
+}
+
+.brand-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo-text {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: opacity 250ms ease;
+}
+
+.brand-logo-text--light {
+  display: block;
+}
+
+.brand-logo-text--dark {
+  display: none;
+}
+
+html.dark-theme .brand-logo-text--light {
+  display: none;
+}
+
+html.dark-theme .brand-logo-text--dark {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .brand-logo-container {
+    gap: 8px;
+  }
+  .brand-logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .brand-logo-text {
+    height: 24px;
+  }
+}
+
+/* Tooltip do Modo Noturno */
+.theme-tooltip {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: -10px;
+  width: 260px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  border: 1px solid var(--gold-border);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation: tooltipFadeIn 0.35s ease-out forwards;
+}
+
+.theme-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--gold-border);
+  border-left: 1px solid var(--gold-border);
+  transform: rotate(45deg);
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cards da Vitrine */
+.card-luxury {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-border);
+}
+
+.card-luxury .card-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: var(--bg-tertiary);
+}
+
+.card-luxury .card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury:hover .card-image-wrap img {
+  transform: scale(1.06);
+}
+
+/* Badges e Selos */
+.badge-metal {
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.badge-titanio {
+  background-color: rgba(42, 24, 40, 0.08);
+  color: var(--text-noble);
+  border: 1px solid var(--gold-border);
+}
+
+html.dark-theme .badge-titanio {
+  background-color: rgba(216, 180, 226, 0.15);
+  color: var(--gold-primary);
+  border: 1px solid var(--gold-border);
+}
+
+.badge-aco {
+  background-color: rgba(120, 113, 108, 0.12);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.badge-prata {
+  background-color: rgba(126, 108, 132, 0.12);
+  color: var(--accent-lilac);
+  border: 1px solid rgba(126, 108, 132, 0.3);
+}
+
+.badge-ouro {
+  background-color: rgba(212, 175, 55, 0.18);
+  color: #B38F24;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+/* Botões de Luxo */
+.btn-gold,
+.btn-purple {
+  background: var(--purple-primary);
+  color: #FFFFFF !important;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--gold-light);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 250ms ease;
+  box-shadow: 0 4px 14px var(--gold-glow);
+}
+
+html.dark-theme .btn-gold,
+html.dark-theme .btn-purple {
+  background: #9333EA;
+  color: #FFFFFF !important;
+  border-color: #A855F7;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.btn-gold:hover,
+.btn-purple:hover {
+  background: var(--gold-dark);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px var(--gold-glow);
+}
+
+html.dark-theme .btn-gold:hover,
+html.dark-theme .btn-purple:hover {
+  background: #A855F7;
+  color: #FFFFFF !important;
+}
+
+.btn-outline-gold,
+.btn-outline-purple {
+  background: transparent;
+  color: var(--purple-primary);
+  font-family: var(--font-serif);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 6px;
+  border: 1.5px solid var(--gold-border);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 250ms ease;
+}
+
+.btn-outline-gold:hover,
+.btn-outline-purple:hover {
+  border-color: var(--gold-primary);
+  background: rgba(126, 34, 206, 0.08);
+  color: var(--gold-primary);
+}
+
+html.dark-theme .btn-outline-gold,
+html.dark-theme .btn-outline-purple {
+  border-color: rgba(168, 85, 247, 0.45);
+  color: #E9D5FF;
+  background: rgba(168, 85, 247, 0.06);
+}
+
+html.dark-theme .btn-outline-gold:hover,
+html.dark-theme .btn-outline-purple:hover {
+  border-color: #C084FC;
+  background: rgba(168, 85, 247, 0.18);
+  color: #FFFFFF;
+}
+
+/* Filtros de Categoria em Pílulas Minimalistas */
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 200ms ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--purple-primary);
+  color: var(--purple-primary);
+}
+
+.filter-btn.active {
+  background: var(--purple-primary);
+  color: #FFFFFF !important;
+  border-color: var(--purple-primary);
+  box-shadow: 0 4px 14px var(--purple-glow);
+  font-weight: 600;
+}
+
+html.dark-theme .filter-btn {
+  background: #18181B;
+  border-color: #27272A;
+  color: #D4D4D8;
+}
+
+html.dark-theme .filter-btn:hover {
+  border-color: #A855F7;
+  color: #E9D5FF;
+}
+
+html.dark-theme .filter-btn.active {
+  background: #9333EA;
+  color: #FFFFFF !important;
+  border-color: #9333EA;
+  font-weight: 600;
+}
+
+/* Chips de Sublocais Anatômicos */
+.sublocal-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 180ms ease;
+}
+
+.sublocal-chip:hover {
+  border-color: var(--purple-primary);
+  color: var(--purple-primary);
+  background: #F8FAFC;
+}
+
+.sublocal-chip.active {
+  background: var(--purple-primary);
+  color: #FFFFFF !important;
+  border-color: var(--purple-primary);
+  font-weight: 600;
+  box-shadow: 0 2px 8px var(--purple-glow);
+}
+
+html.dark-theme .sublocal-chip {
+  background: #1E1B24;
+  border-color: #2F2A38;
+  color: #C4B5FD;
+}
+
+html.dark-theme .sublocal-chip:hover {
+  border-color: #A855F7;
+  color: #FFFFFF;
+  background: #2B2538;
+}
+
+html.dark-theme .sublocal-chip.active {
+  background: #9333EA;
+  color: #FFFFFF !important;
+  border-color: #9333EA;
+  font-weight: 600;
+}
+
+/* Swatches Metálicos Realistas (Prata & Ouro Champanhe Nobre #C5A059) */
+.swatch-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.swatch-prata {
+  background: linear-gradient(135deg, #F8FAFC 0%, #CBD5E1 100%);
+  border: 1px solid #94A3B8;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.swatch-dourado {
+  background: linear-gradient(135deg, #EAD59E 0%, #C5A059 100%);
+  border: 1px solid #A88438;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Seletor de Acabamento (Prata / Dourado) nos Cards e no Modal */
+.color-pill-btn {
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 180ms ease;
+}
+
+.color-pill-btn:hover {
+  border-color: var(--purple-primary);
+  color: var(--purple-primary);
+}
+
+.color-pill-btn.active {
+  background: var(--purple-primary);
+  color: #FFFFFF !important;
+  border-color: var(--purple-primary);
+  box-shadow: 0 2px 6px var(--purple-glow);
+  font-weight: 600;
+}
+
+html.dark-theme .color-pill-btn {
+  background: #18181B;
+  border-color: #27272A;
+  color: #D4D4D8;
+}
+
+html.dark-theme .color-pill-btn.active {
+  background: #9333EA;
+  color: #FFFFFF !important;
+  border-color: #9333EA;
+  font-weight: 600;
+}
+
+.modal-color-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 200ms ease;
+}
+
+.modal-color-btn:hover {
+  border-color: var(--purple-primary);
+  color: var(--purple-primary);
+}
+
+.modal-color-btn.active {
+  border-color: var(--purple-primary);
+  background: rgba(126, 34, 206, 0.08);
+  color: var(--purple-primary);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px var(--purple-primary);
+}
+
+html.dark-theme .modal-color-btn.active {
+  background: rgba(168, 85, 247, 0.15);
+  color: #E9D5FF;
+  border-color: #A855F7;
+  box-shadow: 0 0 0 1px #A855F7;
+}
+
+/* Drawer da Sacola Lateral */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 440px;
+  background: var(--bg-drawer);
+  border-left: 1px solid var(--gold-border);
+  box-shadow: -15px 0 35px rgba(0, 0, 0, 0.3);
+  z-index: 101;
+  transform: translateX(100%);
+  transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-overlay.open .drawer-content {
+  transform: translateX(0);
+}
+
+/* Drawer de Navegação Lateral (Menu Hambúrguer com Regiões Anatômicas) */
+.nav-drawer-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 380px;
+  background: var(--bg-drawer);
+  border-right: 1px solid var(--gold-border);
+  box-shadow: 15px 0 35px rgba(0, 0, 0, 0.25);
+  z-index: 101;
+  transform: translateX(-100%);
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-overlay.open .nav-drawer-content {
+  transform: translateX(0);
+}
+
+.drawer-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 180ms ease;
+  width: 100%;
+  text-align: left;
+}
+
+.drawer-nav-item:hover {
+  background: rgba(126, 34, 206, 0.08);
+  border-color: var(--gold-border);
+  color: var(--purple-primary);
+}
+
+html.dark-theme .drawer-nav-item:hover {
+  background: rgba(168, 85, 247, 0.15);
+  color: #E9D5FF;
+}
+
+.drawer-sublink {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  transition: all 180ms ease;
+  cursor: pointer;
+}
+
+.drawer-sublink:hover {
+  border-color: var(--purple-primary);
+  color: var(--purple-primary);
+  background: #FFFFFF;
+}
+
+html.dark-theme .drawer-sublink {
+  background: #1C1917;
+  border-color: #292524;
+  color: #D6D3D1;
+}
+
+html.dark-theme .drawer-sublink:hover {
+  border-color: #A855F7;
+  color: #FFFFFF;
+  background: #27272A;
+}
+
+/* Modal de Visualização Rápida */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.96);
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.open .modal-content {
+  transform: scale(1);
+}
+
+/* Toast Notificação */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--gold-border);
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: toastSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes toastSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação suave para troca de lista */
+.fade-in-item {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE REFINADA (CELULARES & TELAS ESTREITAS)
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* Drawer da sacola ocupa tela inteira para conforto no celular */
+  .drawer-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Modal Quick View em celulares */
+  .modal-content {
+    margin: 8px;
+    max-width: calc(100% - 16px);
+    max-height: 94vh;
+    border-radius: 14px;
+    padding: 12px;
+  }
+
+  /* Título principal do Hero com leitura refinada e sem quebra excessiva */
+  h1, .hero-title {
+    letter-spacing: 0.05em;
+    line-height: 1.25;
+  }
+
+  /* Cards da vitrine com proporções impecáveis em 2 colunas */
+  .card-luxury {
+    border-radius: 10px;
+  }
+
+  .card-luxury .card-image-wrap {
+    border-radius: 10px 10px 0 0;
+  }
+
+  /* Filtros em linha no celular com rolagem tátil e sem barra feia */
+  .filter-btn {
+    padding: 7px 14px;
+    font-size: 0.75rem;
+  }
+
+  /* Toasts ajustados para celular */
+  .toast-container {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+  
+  .toast {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.8125rem;
+  }
+}
+
+/* ==========================================================================
+   CARDS DE MAPAS ANATÔMICOS DE PERFURAÇÕES (HERO SECTION)
+   ========================================================================== */
+.anatomy-card {
+  background-color: #FAF8FB;
+  border: 1px solid rgba(126, 34, 206, 0.14);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 300ms ease;
+  position: relative;
+}
+
+html.dark-theme .anatomy-card {
+  background-color: #121016;
+  border: 1px solid rgba(212, 175, 55, 0.32); /* Ouro Champanhe #D4AF37 */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.04);
+}
+
+.anatomy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+html.dark-theme .anatomy-card:hover {
+  border-color: rgba(212, 175, 55, 0.65);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(212, 175, 55, 0.12);
+}
+
+/* Card Orelha em Destaque no Desktop */
+@media (min-width: 1024px) {
+  .anatomy-card-highlight {
+    transform: translateY(-8px);
+    border-color: var(--purple-primary);
+    box-shadow: 0 16px 40px rgba(126, 34, 206, 0.12);
+  }
+  html.dark-theme .anatomy-card-highlight {
+    border-color: #D4AF37;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(212, 175, 55, 0.18);
+  }
+  .anatomy-card-highlight:hover {
+    transform: translateY(-12px);
+  }
+}
+
+.anatomy-badge-destaque {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #7E22CE, #9333EA);
+  color: #FFFFFF;
+  font-family: var(--font-serif);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.25rem 0.875rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(126, 34, 206, 0.3);
+  z-index: 10;
+  white-space: nowrap;
+}
+
+html.dark-theme .anatomy-badge-destaque {
+  background: linear-gradient(135deg, #D4AF37, #B8860B);
+  color: #09090B;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+}
+
+.anatomy-img-container {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 0.875rem;
+  overflow: hidden;
+  background-color: #09090B;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+html.dark-theme .anatomy-img-container {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.anatomy-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 500ms ease;
+}
+
+.anatomy-card:hover .anatomy-img-container img {
+  transform: scale(1.025);
+}
+
+/* Tags/Pins Interativos */
+.anatomy-point-tag {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  padding: 0.375rem 0.625rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(126, 34, 206, 0.18);
+  color: #18181B;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+  user-select: none;
+}
+
+html.dark-theme .anatomy-point-tag {
+  background-color: rgba(25, 22, 32, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: #F4F4F5;
+}
+
+.anatomy-point-tag:hover {
+  background-color: #7E22CE;
+  color: #FFFFFF;
+  border-color: #7E22CE;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(126, 34, 206, 0.25);
+}
+
+html.dark-theme .anatomy-point-tag:hover {
+  background-color: #D4AF37;
+  color: #09090B;
+  border-color: #D4AF37;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+}
+
+.anatomy-point-tag span.pin-sparkle {
+  color: #7E22CE;
+  font-size: 0.625rem;
+  transition: color 200ms ease;
+}
+
+html.dark-theme .anatomy-point-tag span.pin-sparkle {
+  color: #D4AF37;
+}
+
+.anatomy-point-tag:hover span.pin-sparkle {
+  color: inherit;
+}
+
+/* Mobile Tabs */
+.anatomy-tab-btn {
+  font-family: var(--font-serif);
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  transition: all 250ms ease;
+}
+
+.anatomy-tab-btn.active {
+  background-color: #FFFFFF;
+  color: #7E22CE;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+html.dark-theme .anatomy-tab-btn.active {
+  background-color: #1F1B27;
+  color: #D4AF37;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
