@@ -1,0 +1,15 @@
+# Arquivos e pastas ignoradas no deploy da Vercel
+scratch/
+scratch_*
+ddg_out.html
+*-UCB-USP-NCL6-14.*
+*conflict*
+.git
+.gitignore
+.agents/
+.gemini/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+img/README.txt

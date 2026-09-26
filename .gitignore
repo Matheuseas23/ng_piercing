@@ -1,0 +1,22 @@
+# Dependências e Builds
+node_modules/
+.vercel/
+
+# Scripts de rascunho e raspadores de desenvolvimento
+scratch/
+scratch_*
+ddg_out.html
+
+# Arquivos de conflito de sincronização do OneDrive
+*-UCB-USP-NCL6-14.*
+*conflict*
+
+# Metadados do Sistema Operacional e IDEs
+.DS_Store
+Thumbs.db
+desktop.ini
+.agents/
+.gemini/
+*.log
+.env
+.env.local

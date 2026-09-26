@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Joia Não Encontrada | NG Piercing Joias</title>
+  
+  <meta name="description" content="Página não encontrada no catálogo oficial da NG Piercing Joias. Retorne para a coleção de joias nobres em titânio e aço cirúrgico." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo-icone.png" type="image/png" />
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '.dark-theme'],
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cinzel', 'Georgia', 'serif'],
+            sans: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            script: ['Pinyon Script', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-stone-50 dark:bg-stone-950 text-stone-800 dark:text-stone-200 antialiased transition-colors duration-300">
+
+  <!-- CABEÇALHO MÍNIMO -->
+  <header class="py-6 border-b border-stone-200/60 dark:border-stone-800/60 bg-white/70 dark:bg-stone-900/70 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-black border border-purple-500/30 flex items-center justify-center shadow-sm">
+          <img src="img/logo-icone.png" alt="NG Piercing" class="w-full h-full object-contain" />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-base sm:text-lg font-medium tracking-[0.2em] text-stone-900 dark:text-stone-100 uppercase">NG Piercing</span>
+          <span class="text-[9px] tracking-[0.35em] text-purple-700 dark:text-purple-400 uppercase -mt-1 font-semibold">Alta Joalheria</span>
+        </div>
+      </a>
+      <a href="/" class="text-xs uppercase tracking-widest text-stone-600 dark:text-stone-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors font-medium">
+        ← Ir para o Início
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL 404 -->
+  <main class="flex-grow flex items-center justify-center px-4 py-16 sm:py-24">
+    <div class="max-w-xl mx-auto text-center">
+      
+      <!-- Detalhe sutil editorial -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-800 dark:text-purple-300 text-xs font-serif tracking-widest uppercase mb-6">
+        <span>✦</span>
+        <span>Erro 404</span>
+        <span>✦</span>
+      </div>
+
+      <h1 class="font-serif text-4xl sm:text-5xl font-medium tracking-tight text-stone-900 dark:text-stone-100 mb-4">
+        Joia Não Encontrada
+      </h1>
+      
+      <p class="font-sans text-sm sm:text-base text-stone-600 dark:text-stone-400 leading-relaxed mb-8 max-w-md mx-auto">
+        A página ou peça que você tentou acessar não existe, foi descontinuada ou o endereço foi digitado incorretamente.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/" class="btn-gold w-full sm:w-auto px-8 py-3.5 text-center flex items-center justify-center gap-2">
+          <span>VER CATÁLOGO COMPLETO</span>
+          <span>➔</span>
+        </a>
+        <a href="https://wa.me/5511954107870?text=Ol%C3%A1!%20Estava%20no%20site%20da%20NG%20Piercing%20e%20gostaria%20de%20ajuda%20para%20encontrar%20uma%20joia." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-outline-gold w-full sm:w-auto px-8 py-3.5 text-center flex items-center justify-center gap-2">
+          <span>💬</span>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ MÍNIMO -->
+  <footer class="py-6 border-t border-stone-200/60 dark:border-stone-800/60 text-center text-xs text-stone-400 dark:text-stone-500">
+    <p>© NG Piercing Joias — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Respeita a preferência de tema salva
+    const savedTheme = localStorage.getItem('ng_theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark-theme');
+    }
+  </script>
+</body>
+</html>
