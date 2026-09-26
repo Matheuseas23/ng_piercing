@@ -393,17 +393,17 @@ function renderVitrine() {
           </button>
         </div>
 
-        <div class="p-3 sm:p-4 flex flex-col flex-1 justify-between">
+        <div class="p-2.5 sm:p-4 flex flex-col flex-1 justify-between">
           <div>
-            <h3 class="font-sans text-xs sm:text-sm font-medium tracking-[0.03em] uppercase text-stone-900 dark:text-stone-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition cursor-pointer" onclick="abrirQuickView(${joia.id})">
+            <h3 class="font-sans text-[11px] sm:text-sm font-medium tracking-[0.03em] uppercase text-stone-900 dark:text-stone-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition cursor-pointer line-clamp-2" onclick="abrirQuickView(${joia.id})">
               ${joia.nome}
             </h3>
-            <p class="text-[11px] sm:text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-1">
+            <p class="text-[10px] sm:text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-1">
               ${joia.indicacao ? `Anatomia: ${joia.indicacao}` : (joia.acabamento ? `Acabamento: ${joia.acabamento}` : '')}
             </p>
 
             <!-- Seletor Rápido de Acabamento com Tom Realista Dourado Champanhe (#C5A059) -->
-            <div class="mt-2.5 flex items-center justify-between gap-1 text-[10px] font-sans">
+            <div class="mt-2 flex flex-wrap items-center justify-between gap-1 text-[10px] font-sans">
               <span class="text-stone-400 text-[10px]">Acabamento:</span>
               <div class="flex items-center gap-1" id="corGroup_${joia.id}">
                 <button type="button" 
@@ -424,16 +424,16 @@ function renderVitrine() {
             </div>
           </div>
 
-          <div class="pt-3 mt-2 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between">
-            <div>
-              <span class="text-[10px] sm:text-xs text-stone-400 block font-normal">Valor da joia</span>
-              <span class="font-serif text-sm sm:text-base font-medium text-stone-900 dark:text-stone-100">
+          <div class="pt-2.5 sm:pt-3 mt-2 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between gap-1">
+            <div class="min-w-0">
+              <span class="text-[9.5px] sm:text-xs text-stone-400 block font-normal leading-tight">Valor da joia</span>
+              <span class="font-serif text-xs sm:text-base font-medium text-stone-900 dark:text-stone-100 whitespace-nowrap">
                 ${formatarPreco(joia.preco)}
               </span>
             </div>
 
             <button onclick="adicionarDaVitrine(${joia.id})" 
-                    class="btn-gold py-1.5 sm:py-2 px-2.5 sm:px-3 text-[11px] sm:text-xs" 
+                    class="btn-gold py-1.5 sm:py-2 px-2 sm:px-3 text-[10.5px] sm:text-xs whitespace-nowrap" 
                     title="Adicionar à Sacola">
               <span>+ Sacola</span>
             </button>
@@ -546,7 +546,7 @@ function abrirQuickView(id) {
   const spec = joia.especificacaoTecnica || {};
 
   content.innerHTML = `
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 p-3.5 sm:p-6">
       <div class="rounded-xl overflow-hidden bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 aspect-square">
         <img src="${joia.imagemUrl || joia.imagem}" 
              alt="${joia.nome}" 
@@ -716,4 +716,11 @@ function filtrarPontoAnatomico(regiao, sublocal) {
     if (s) nomePonto = s.nome;
   }
   showToast(`✨ Joias filtradas para ${nomePonto} (${nomeRegiao})`);
+}
+
+function syncAnatomyHover(regiao, num, active) {
+  const pin = document.getElementById(`pin-${regiao}-${num}`);
+  const item = document.getElementById(`legend-${regiao}-${num}`);
+  if (pin) pin.classList.toggle('active-pin', active);
+  if (item) item.classList.toggle('active-item', active);
 }

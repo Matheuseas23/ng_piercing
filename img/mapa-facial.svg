@@ -1,126 +1,186 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 440" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540" width="100%" height="100%">
   <defs>
-    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#2d124d" />
-      <stop offset="60%" stop-color="#140f1f" />
-      <stop offset="100%" stop-color="#09070e" />
+    <!-- Gradiente de fundo luxo púrpura profundo -->
+    <radialGradient id="bgGrad" cx="30%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#3b1566" />
+      <stop offset="45%" stop-color="#210b3b" />
+      <stop offset="85%" stop-color="#120620" />
+      <stop offset="100%" stop-color="#08020d" />
     </radialGradient>
-    <radialGradient id="faceSkin" cx="45%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#EAC0A2" />
-      <stop offset="60%" stop-color="#D5A080" />
-      <stop offset="90%" stop-color="#B77B57" />
-      <stop offset="100%" stop-color="#8A4E32" />
+
+    <!-- Vinheta da face -->
+    <radialGradient id="faceVignette" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0.45" />
+      <stop offset="70%" stop-color="#3b0764" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#120620" stop-opacity="0" />
     </radialGradient>
-    <filter id="pinShadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+
+    <!-- Pele facial suave e natural (sem maquiagem pesada ou aspecto plástico) -->
+    <linearGradient id="faceSkinGrad" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#FDE8DA" />
+      <stop offset="40%" stop-color="#EBBCA1" />
+      <stop offset="75%" stop-color="#D79E7E" />
+      <stop offset="100%" stop-color="#B26F4F" />
+    </linearGradient>
+
+    <filter id="pinShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.75"/>
     </filter>
-    <marker id="arrowGold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#D4AF37" />
-    </marker>
+
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#C084FC" flood-opacity="0.6"/>
+    </filter>
+
+    <linearGradient id="pinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9333EA" />
+      <stop offset="100%" stop-color="#6B21A8" />
+    </linearGradient>
+
+    <style>
+      .pin-group { cursor: pointer; transition: transform 0.2s ease; }
+      .pin-group:hover circle.pin-circle { fill: #A855F7; stroke: #FDE047; stroke-width: 2.2px; }
+      .pin-group:hover text.pin-txt { fill: #FFFFFF; font-weight: 900; }
+      .legend-row { cursor: pointer; transition: opacity 0.2s, transform 0.2s; }
+      .legend-row:hover rect.legend-bg { fill: rgba(168, 85, 247, 0.28); }
+      .legend-row:hover text.legend-txt { fill: #FDE047; font-weight: 800; }
+    </style>
   </defs>
 
-  
-    <rect width="100%" height="100%" fill="url(#bgGrad)" />
-    
-    <!-- Geometric diamond facets (Top-Left corner) matching NG Piercing reference poster -->
-    <g opacity="0.25">
-      <rect x="-30" y="-30" width="90" height="90" rx="8" fill="#A855F7" transform="rotate(35 15 15)" />
-      <rect x="25" y="-40" width="70" height="70" rx="8" fill="#7E22CE" transform="rotate(35 60 -5)" opacity="0.7" />
-      <rect x="-20" y="45" width="60" height="60" rx="8" fill="#9333EA" transform="rotate(35 10 75)" opacity="0.5" />
-      <rect x="50" y="25" width="45" height="45" rx="6" fill="#C084FC" transform="rotate(35 72 47)" opacity="0.4" />
+  <!-- Fundo Sólido Gradiente -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <!-- Elementos Geométricos Romboidais (ID Visual NG Piercing) -->
+  <g opacity="0.32">
+    <rect x="-35" y="-35" width="125" height="125" rx="14" fill="#9333EA" transform="rotate(35 25 25)" />
+    <rect x="40" y="-45" width="95" height="95" rx="10" fill="#7E22CE" transform="rotate(35 85 5)" opacity="0.7" />
+    <rect x="-20" y="70" width="85" height="85" rx="10" fill="#A855F7" transform="rotate(35 22 112)" opacity="0.5" />
+    <rect x="80" y="45" width="60" height="60" rx="8" fill="#C084FC" transform="rotate(35 110 75)" opacity="0.4" />
+  </g>
+
+  <!-- Cabeçalho Oficial do Poster -->
+  <g text-anchor="middle">
+    <text x="270" y="48" fill="#FFFFFF" font-family="'Montserrat', 'Arial', sans-serif" font-size="24" font-weight="900" letter-spacing="2">LOCAIS PARA</text>
+    <text x="270" y="82" fill="#E879F9" font-family="'Montserrat', 'Arial', sans-serif" font-size="34" font-weight="900" letter-spacing="3" filter="url(#glowPurple)">PERFURAÇÃO</text>
+    <text x="270" y="108" fill="#FFFFFF" font-family="'Montserrat', 'Arial', sans-serif" font-size="19" font-weight="800" letter-spacing="2">(FACIAL &amp; NASAL)</text>
+  </g>
+
+  <!-- Vinheta Circular Suave para a Face -->
+  <circle cx="152" cy="295" r="145" fill="url(#faceVignette)" />
+
+  <!-- ========================================================================
+       ILUSTRAÇÃO ANATÔMICA FACIAL E NASAL (SEM NENHUM PIERCING)
+       ======================================================================== -->
+  <g id="facialArtwork" transform="translate(152, 295) scale(0.85)">
+    <!-- Base Facial Silhueta Suave -->
+    <ellipse cx="0" cy="0" rx="120" ry="145" fill="url(#faceSkinGrad)" opacity="0.75" />
+
+    <!-- Sobrancelhas Naturais -->
+    <path d="M -70 -75 C -45 -92, -18 -86, -4 -70" fill="none" stroke="#482212" stroke-width="4.5" stroke-linecap="round" />
+    <path d="M 4 -70 C 18 -86, 45 -92, 70 -75" fill="none" stroke="#482212" stroke-width="4.5" stroke-linecap="round" />
+
+    <!-- Olhos Esboçados Sutis (Para Referência Anatômica) -->
+    <path d="M -60 -50 C -42 -62, -22 -62, -12 -50 C -22 -44, -42 -44, -60 -50 Z" fill="#260C05" opacity="0.65" />
+    <path d="M 12 -50 C 22 -62, 42 -62, 60 -50 C 42 -44, 22 -44, 12 -50 Z" fill="#260C05" opacity="0.65" />
+
+    <!-- Dorso do Nariz e Ponte Nasal -->
+    <path d="M 0 -55 L -3 -5 C -4 10, -18 24, -20 28 C -14 36, 14 36, 20 28 C 18 24, 4 10, 3 -5 L 0 -55" 
+          fill="none" stroke="#87472A" stroke-width="1.8" opacity="0.6" stroke-linejoin="round" />
+
+    <!-- Ponta e Asas Nasais (Aba Nasal) -->
+    <path d="M -20 28 C -28 22, -32 14, -26 4 C -20 4, -16 14, -10 24" fill="none" stroke="#7A391E" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M 20 28 C 28 22, 32 14, 26 4 C 20 4, 16 14, 10 24" fill="none" stroke="#7A391E" stroke-width="2.2" stroke-linecap="round" />
+
+    <!-- Narinas e Columela do Septo -->
+    <ellipse cx="-9" cy="27" rx="4.5" ry="3.2" fill="#2B0E05" transform="rotate(-15 -9 27)" />
+    <ellipse cx="9" cy="27" rx="4.5" ry="3.2" fill="#2B0E05" transform="rotate(15 9 27)" />
+    <path d="M -5 29 C 0 32, 0 32, 5 29" fill="none" stroke="#7A391E" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Maçã do Rosto (Zigmático) Sombra Delicada -->
+    <ellipse cx="55" cy="5" rx="20" ry="12" fill="#D67B62" opacity="0.25" filter="blur(4px)" />
+
+    <!-- Lábios Sutis para Proporção Facial -->
+    <path d="M -28 65 C -14 60, 14 60, 28 65 C 14 76, -14 76, -28 65 Z" fill="#BA5A6B" opacity="0.55" />
+  </g>
+
+  <!-- ========================================================================
+       PINOS NUMERADOS FACIAIS (EXATAMENTE COMO NO PADRÃO DO ESTÚDIO)
+       ======================================================================== -->
+
+  <!-- 1 - ABA NASAL (Nostril / Cartilagem Alar Direita) -->
+  <g class="pin-group" id="pin-face-1" onclick="filtrarPontoAnatomico('nariz', 'aba-nasal')">
+    <circle cx="178" cy="320" r="12" fill="url(#pinGrad)" stroke="#FFFFFF" stroke-width="1.8" filter="url(#pinShadow)" class="pin-circle"/>
+    <text x="178" y="325" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" text-anchor="middle" class="pin-txt">1</text>
+  </g>
+
+  <!-- 2 - SEPTO (Columela Central Inferior) -->
+  <g class="pin-group" id="pin-face-2" onclick="filtrarPontoAnatomico('nariz', 'septo')">
+    <circle cx="152" cy="330" r="12" fill="url(#pinGrad)" stroke="#FFFFFF" stroke-width="1.8" filter="url(#pinShadow)" class="pin-circle"/>
+    <text x="152" y="335" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" text-anchor="middle" class="pin-txt">2</text>
+  </g>
+
+  <!-- 3 - SOBRANCELHA (Terço Distal da Sobrancelha) -->
+  <g class="pin-group" id="pin-face-3" onclick="filtrarPontoAnatomico('faciais', 'sobrancelha')">
+    <circle cx="202" cy="225" r="12" fill="url(#pinGrad)" stroke="#FFFFFF" stroke-width="1.8" filter="url(#pinShadow)" class="pin-circle"/>
+    <text x="202" y="230" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" text-anchor="middle" class="pin-txt">3</text>
+  </g>
+
+  <!-- 4 - BRIDGE (Ponte Nasal Entre os Olhos) -->
+  <g class="pin-group" id="pin-face-4" onclick="filtrarPontoAnatomico('faciais', 'bridge')">
+    <circle cx="152" cy="245" r="12" fill="url(#pinGrad)" stroke="#FFFFFF" stroke-width="1.8" filter="url(#pinShadow)" class="pin-circle"/>
+    <text x="152" y="250" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" text-anchor="middle" class="pin-txt">4</text>
+  </g>
+
+  <!-- 5 - MICRODERMAL (Maçã do Rosto / Zigomático) -->
+  <g class="pin-group" id="pin-face-5" onclick="filtrarPontoAnatomico('faciais', 'microdermal')">
+    <circle cx="208" cy="295" r="12" fill="url(#pinGrad)" stroke="#FFFFFF" stroke-width="1.8" filter="url(#pinShadow)" class="pin-circle"/>
+    <text x="208" y="300" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" text-anchor="middle" class="pin-txt">5</text>
+  </g>
+
+  <!-- 6 - SURFACE (Têmpora / Pré-auricular) -->
+  <g class="pin-group" id="pin-face-6" onclick="filtrarPontoAnatomico('faciais', 'surface')">
+    <circle cx="95" cy="295" r="12" fill="url(#pinGrad)" stroke="#FFFFFF" stroke-width="1.8" filter="url(#pinShadow)" class="pin-circle"/>
+    <text x="95" y="300" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" text-anchor="middle" class="pin-txt">6</text>
+  </g>
+
+  <!-- ========================================================================
+       COLUNA LATERAL DIREITA: LEGENDA NUMERADA (EXATAMENTE COMO NO POSTER)
+       ======================================================================== -->
+  <g id="faceLegend" transform="translate(258, 190)">
+    <!-- 1 -->
+    <g class="legend-row" onclick="filtrarPontoAnatomico('nariz', 'aba-nasal')">
+      <rect x="0" y="0" width="265" height="28" rx="4" fill="transparent" class="legend-bg" />
+      <text x="8" y="19" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" class="legend-txt">1 - ABA NASAL</text>
     </g>
-
-    <!-- Header Banner -->
-    <g transform="translate(190, 42)" text-anchor="middle">
-      <text fill="#FFFFFF" font-family="'Cinzel', Georgia, serif" font-size="14" font-weight="600" letter-spacing="3">LOCAIS PARA PERFURAÇÃO</text>
-      <text y="18" fill="#D4AF37" font-family="'Cinzel', Georgia, serif" font-size="12" font-weight="500" letter-spacing="4">(FACIAL & NASAL)</text>
+    <!-- 2 -->
+    <g class="legend-row" transform="translate(0, 38)" onclick="filtrarPontoAnatomico('nariz', 'septo')">
+      <rect x="0" y="0" width="265" height="28" rx="4" fill="transparent" class="legend-bg" />
+      <text x="8" y="19" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" class="legend-txt">2 - SEPTO</text>
     </g>
-
-    <!-- Watermark NG PIERCING STUDIO (Bottom) -->
-    <g transform="translate(190, 420)" text-anchor="middle" opacity="0.18">
-      <text fill="none" stroke="#A855F7" stroke-width="1" font-family="'Cinzel', Georgia, serif" font-size="20" font-weight="600" letter-spacing="4">NG PIERCING STUDIO</text>
-      <text y="15" fill="#A855F7" font-family="'Cinzel', Georgia, serif" font-size="18" font-weight="600" letter-spacing="4">NG PIERCING STUDIO</text>
+    <!-- 3 -->
+    <g class="legend-row" transform="translate(0, 76)" onclick="filtrarPontoAnatomico('faciais', 'sobrancelha')">
+      <rect x="0" y="0" width="265" height="28" rx="4" fill="transparent" class="legend-bg" />
+      <text x="8" y="19" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" class="legend-txt">3 - SOBRANCELHA</text>
     </g>
-  
-
-  <!-- Silhueta Facial & Nariz (Sem joias) -->
-  <g id="faceAnatomy" transform="translate(190, 220)">
-    <!-- Base de Rosto Feminino Suave -->
-    <ellipse cx="0" cy="-10" rx="100" ry="140" fill="url(#faceSkin)" opacity="0.3" filter="blur(16px)" />
-
-    <!-- Sobrancelha Esquerda & Direita -->
-    <path d="M -65 -85 C -45 -100, -20 -95, -5 -80" fill="none" stroke="#5E2F1B" stroke-width="3.5" stroke-linecap="round" />
-    <path d="M 5 -80 C 20 -95, 45 -100, 65 -85" fill="none" stroke="#5E2F1B" stroke-width="3.5" stroke-linecap="round" />
-
-    <!-- Olhos Esboçados Delicados -->
-    <path d="M -60 -65 C -45 -75, -25 -75, -15 -65 C -25 -58, -45 -58, -60 -65 Z" fill="#3D1A10" opacity="0.6" />
-    <path d="M 15 -65 C 25 -75, 45 -75, 60 -65 C 45 -58, 25 -58, 15 -65 Z" fill="#3D1A10" opacity="0.6" />
-
-    <!-- Ponte Nasal & Dorso do Nariz -->
-    <path d="M 0 -70 L -4 -10 C -5 10, -20 25, -22 30 C -15 38, 15 38, 22 30 C 20 25, 5 10, 4 -10 L 0 -70" 
-          fill="none" stroke="#87472A" stroke-width="1.8" opacity="0.5" stroke-linejoin="round" />
-
-    <!-- Abas Nasais & Ponta -->
-    <path d="M -22 30 C -30 25, -35 15, -28 5 C -22 5, -18 15, -12 25" fill="none" stroke="#7A391E" stroke-width="2" stroke-linecap="round" />
-    <path d="M 22 30 C 30 25, 35 15, 28 5 C 22 5, 18 15, 12 25" fill="none" stroke="#7A391E" stroke-width="2" stroke-linecap="round" />
-
-    <!-- Narinas & Columela Septal -->
-    <ellipse cx="-10" cy="30" rx="4.5" ry="3" fill="#3A150A" transform="rotate(-15 -10 30)" />
-    <ellipse cx="10" cy="30" rx="4.5" ry="3" fill="#3A150A" transform="rotate(15 10 30)" />
-    <path d="M -5 32 C 0 35, 0 35, 5 32" fill="none" stroke="#7A391E" stroke-width="2" stroke-linecap="round" />
-
-    <!-- Lábios sutis para proporção facial -->
-    <path d="M -30 65 C -15 60, 15 60, 30 65 C 15 78, -15 78, -30 65 Z" fill="#C57585" opacity="0.5" />
+    <!-- 4 -->
+    <g class="legend-row" transform="translate(0, 114)" onclick="filtrarPontoAnatomico('faciais', 'bridge')">
+      <rect x="0" y="0" width="265" height="28" rx="4" fill="transparent" class="legend-bg" />
+      <text x="8" y="19" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" class="legend-txt">4 - BRIDGE</text>
+    </g>
+    <!-- 5 -->
+    <g class="legend-row" transform="translate(0, 152)" onclick="filtrarPontoAnatomico('faciais', 'microdermal')">
+      <rect x="0" y="0" width="265" height="28" rx="4" fill="transparent" class="legend-bg" />
+      <text x="8" y="19" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" class="legend-txt">5 - MICRODERMAL</text>
+    </g>
+    <!-- 6 -->
+    <g class="legend-row" transform="translate(0, 190)" onclick="filtrarPontoAnatomico('faciais', 'surface')">
+      <rect x="0" y="0" width="265" height="28" rx="4" fill="transparent" class="legend-bg" />
+      <text x="8" y="19" fill="#FFFFFF" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" class="legend-txt">6 - SURFACE</text>
+    </g>
   </g>
 
-  <!-- PONTOS NUMERADOS COM SETAS -->
-
-  <!-- 3 - SOBRANCELHA -->
-  <g class="map-pin-item" onclick="filtrarPontoAnatomico('faciais', 'sobrancelha')">
-    <path d="M 245 130 L 290 120" stroke="#D4AF37" stroke-width="1.2" marker-start="url(#arrowGold)" />
-    <circle cx="245" cy="130" r="10" fill="#7E22CE" stroke="#D4AF37" stroke-width="1.2" filter="url(#pinShadow)"/>
-    <text x="245" y="134" fill="#FFF" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" text-anchor="middle">3</text>
-    <text x="298" y="123" fill="#FFF" font-family="'Cinzel', serif" font-size="9.5" letter-spacing="1">SOBRANCELHA</text>
+  <!-- Marca D'água Oficial no Rodapé (Dupla: Contorno + Preenchimento) -->
+  <g transform="translate(270, 482)" text-anchor="middle">
+    <text y="0" fill="none" stroke="#A855F7" stroke-width="1.2" opacity="0.22" font-family="'Cinzel', 'Georgia', serif" font-size="28" font-weight="700" letter-spacing="5">NG PIERCING STUDIO</text>
+    <text y="22" fill="#7E22CE" opacity="0.18" font-family="'Cinzel', 'Georgia', serif" font-size="28" font-weight="700" letter-spacing="5">NG PIERCING STUDIO</text>
   </g>
-
-  <!-- 4 - BRIDGE (Ponte entre os olhos) -->
-  <g class="map-pin-item" onclick="filtrarPontoAnatomico('faciais', 'bridge')">
-    <path d="M 190 155 L 120 145" stroke="#D4AF37" stroke-width="1.2" marker-start="url(#arrowGold)" />
-    <circle cx="190" cy="155" r="10" fill="#7E22CE" stroke="#D4AF37" stroke-width="1.2" filter="url(#pinShadow)"/>
-    <text x="190" y="159" fill="#FFF" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" text-anchor="middle">4</text>
-    <text x="112" y="148" fill="#FFF" font-family="'Cinzel', serif" font-size="9.5" letter-spacing="1" text-anchor="end">BRIDGE</text>
-  </g>
-
-  <!-- 1 - ABA NASAL (NOSTRIL) -->
-  <g class="map-pin-item" onclick="filtrarPontoAnatomico('nariz', 'aba-nasal')">
-    <path d="M 218 245 L 275 235" stroke="#D4AF37" stroke-width="1.2" marker-start="url(#arrowGold)" />
-    <circle cx="218" cy="245" r="10" fill="#7E22CE" stroke="#D4AF37" stroke-width="1.2" filter="url(#pinShadow)"/>
-    <text x="218" y="249" fill="#FFF" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" text-anchor="middle">1</text>
-    <text x="282" y="238" fill="#FFF" font-family="'Cinzel', serif" font-size="9.5" letter-spacing="1">ABA NASAL</text>
-  </g>
-
-  <!-- 2 - SEPTO -->
-  <g class="map-pin-item" onclick="filtrarPontoAnatomico('nariz', 'septo')">
-    <path d="M 190 262 L 125 270" stroke="#D4AF37" stroke-width="1.2" marker-start="url(#arrowGold)" />
-    <circle cx="190" cy="262" r="10" fill="#7E22CE" stroke="#D4AF37" stroke-width="1.2" filter="url(#pinShadow)"/>
-    <text x="190" y="266" fill="#FFF" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" text-anchor="middle">2</text>
-    <text x="118" y="273" fill="#FFF" font-family="'Cinzel', serif" font-size="9.5" letter-spacing="1" text-anchor="end">SEPTO</text>
-  </g>
-
-  <!-- 5 - MICRODERMAL -->
-  <g class="map-pin-item" onclick="filtrarPontoAnatomico('faciais', 'microdermal')">
-    <path d="M 275 200 L 320 200" stroke="#D4AF37" stroke-width="1.2" marker-start="url(#arrowGold)" />
-    <circle cx="275" cy="200" r="10" fill="#7E22CE" stroke="#D4AF37" stroke-width="1.2" filter="url(#pinShadow)"/>
-    <text x="275" y="204" fill="#FFF" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" text-anchor="middle">5</text>
-    <text x="328" y="203" fill="#FFF" font-family="'Cinzel', serif" font-size="9.5" letter-spacing="1">MICRODERMAL</text>
-  </g>
-
-  <!-- 6 - SURFACE -->
-  <g class="map-pin-item" onclick="filtrarPontoAnatomico('faciais', 'surface')">
-    <path d="M 105 195 L 60 195" stroke="#D4AF37" stroke-width="1.2" marker-start="url(#arrowGold)" />
-    <circle cx="105" cy="195" r="10" fill="#7E22CE" stroke="#D4AF37" stroke-width="1.2" filter="url(#pinShadow)"/>
-    <text x="105" y="199" fill="#FFF" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" text-anchor="middle">6</text>
-    <text x="52" y="198" fill="#FFF" font-family="'Cinzel', serif" font-size="9.5" letter-spacing="1" text-anchor="end">SURFACE</text>
-  </g>
-
 </svg>

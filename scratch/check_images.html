@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Validação Visual de Imagens Limpas</title>
+  <style>
+    body { font-family: sans-serif; background: #121212; color: #fff; padding: 20px; }
+    h1 { color: #d4af37; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .card { background: #1e1e1e; border-radius: 8px; overflow: hidden; border: 1px solid #333; }
+    .card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+    .info { padding: 10px; font-size: 13px; }
+    .name { font-weight: bold; margin-bottom: 4px; color: #f5f5f5; }
+    .origin { font-size: 11px; color: #aaa; }
+  </style>
+</head>
+<body>
+  <h1>Validação das Imagens Limpas (Sem Selos / Logos)</h1>
+  <div class="grid" id="grid"></div>
+
+  <script src="../js/products.js"></script>
+  <script>
+    const grid = document.getElementById('grid');
+    // Pegar uma amostra representativa de cada categoria
+    const uniqueKeys = new Set();
+    catalogoJoias.forEach(j => {
+      const img = j.imagemUrl || j.imagem;
+      if (!uniqueKeys.has(img)) {
+        uniqueKeys.add(img);
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${img}" alt="${j.nome}" onerror="this.src='https://via.placeholder.com/300?text=Erro';" />
+          <div class="info">
+            <div class="name">${j.nome}</div>
+            <div class="origin">${j.material} • R$ ${j.preco.toFixed(2)}</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      }
+    });
+  </script>
+</body>
+</html>

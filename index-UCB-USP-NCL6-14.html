@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=1200&q=80" />
 
   <!-- Favicon -->
-  <link rel="icon" href="img/logo-icone.png" type="image/png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
 
   <!-- Tipografia de Alta Joalheria: Cinzel, Montserrat & Pinyon Script -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +60,7 @@
        CABEÇALHO EDITORIAL
        ========================================================================== -->
   <header class="sticky top-0 z-50 header-glass">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4">
       
       <!-- Botão Menu / Gaveta Anatômica -->
       <button id="navDrawerOpenBtn" class="p-2 -ml-2 text-stone-700 dark:text-stone-300 hover:text-purple-700 dark:hover:text-purple-400 transition flex items-center" aria-label="Abrir menu de navegação e anatomia">
@@ -69,24 +69,29 @@
         </svg>
       </button>
 
+      <!-- Logo de Alta Joalheria -->
+      <a href="#top" class="flex flex-col items-center text-center group">
+        <span class="font-serif text-xl sm:text-2xl font-medium tracking-[0.2em] text-stone-900 dark:text-stone-100 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition">
+          NG PIERCING
+        </span>
+        <span class="text-[9px] tracking-[0.45em] text-stone-500 dark:text-stone-400 uppercase -mt-1 font-medium">
+          JOIAS
+        </span>
       <!-- Logotipo Oficial (Símbolo da Piercer & Tipografia Oficial) -->
       <a href="#top" class="brand-logo-container group" aria-label="NG Piercing - Início">
         <div class="brand-logo-icon">
           <img 
             src="img/logo-icone.png" 
-            alt="NG Piercing - Símbolo da Piercer" 
+            onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src='../../../.gemini/antigravity/brain/c775c9b6-3181-4aaf-b923-d4181e9bd39f/.user_uploaded/media_1790177138009.png'; }" 
+            alt="NG Piercing - Símbolo" 
           />
         </div>
         <div class="flex items-center">
           <img 
-            src="img/logo-texto-dark.png" 
+            src="img/logo-texto.png" 
+            onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src='../../../.gemini/antigravity/brain/c775c9b6-3181-4aaf-b923-d4181e9bd39f/.user_uploaded/media_1790177132831.png'; }" 
             alt="NG Piercing Body Piercing" 
-            class="brand-logo-text brand-logo-text--light" 
-          />
-          <img 
-            src="img/logo-texto-white.png" 
-            alt="NG Piercing Body Piercing" 
-            class="brand-logo-text brand-logo-text--dark" 
+            class="brand-logo-text" 
           />
         </div>
       </a>
@@ -159,14 +164,9 @@
       
       <!-- Topo do Drawer -->
       <div class="p-5 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between bg-stone-50/50 dark:bg-stone-900/50">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full overflow-hidden bg-black border border-purple-500/30 flex-shrink-0 flex items-center justify-center shadow-sm">
-            <img src="img/logo-icone.png" alt="NG Piercing" class="w-full h-full object-contain" />
-          </div>
-          <div class="flex flex-col">
-            <span class="font-serif text-base font-medium tracking-[0.16em] text-stone-900 dark:text-stone-100 leading-tight">NG PIERCING</span>
-            <span class="text-[9px] tracking-[0.35em] text-purple-700 dark:text-purple-400 uppercase font-medium">BODY PIERCING</span>
-          </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg font-medium tracking-[0.18em] text-stone-900 dark:text-stone-100">NG PIERCING</span>
+          <span class="text-[9px] tracking-[0.4em] text-purple-700 dark:text-purple-400 uppercase -mt-0.5 font-medium">JOIAS & ANATOMIA</span>
         </div>
         <button id="closeNavDrawerBtn" class="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 p-1.5 transition" aria-label="Fechar menu">
           ✕
@@ -303,266 +303,30 @@
     <!-- ==========================================================================
          HERO SECTION EDITORIAL (Luz natural, textura de linho e travertino)
          ========================================================================== -->
-    <!-- ==========================================================================
-         GUIA VISUAL INTERATIVO DE PERFURAÇÕES (MAPAS ANATÔMICOS)
-         ========================================================================== -->
-    <section id="inicio" class="relative overflow-hidden py-10 sm:py-16 md:py-20 border-b border-stone-200/80 dark:border-stone-800/80 bg-gradient-to-b from-stone-50/60 to-transparent dark:from-stone-950/60">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="inicio" class="relative overflow-hidden py-12 sm:py-16 md:py-24 border-b border-stone-200/80 dark:border-stone-800/80 bg-gradient-to-b from-stone-50/50 to-transparent dark:from-stone-900/20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5 sm:space-y-6">
         
-        <!-- Cabeçalho Editorial do Guia -->
-        <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-          <span class="text-purple-700 dark:text-purple-400 text-[11px] sm:text-xs uppercase tracking-[0.28em] font-medium block">
-            Guia de Perfurações & Visagismo
-          </span>
-          <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl uppercase tracking-[0.12em] font-normal text-stone-900 dark:text-stone-100 mt-2">
-            Mapas Anatômicos de Piercing
+        <div class="space-y-0.5 sm:space-y-1">
+          <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-[0.08em] text-stone-900 dark:text-stone-100 leading-[1.2] uppercase">
+            PIERCINGS QUE ELEVAM
           </h1>
-          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 mt-2 font-light leading-relaxed">
-            Selecione o ponto anatômico desejado para explorar as joias biocompatíveis em Titânio e Aço ideais para cada perfuração.
+          <p class="font-script text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-purple-700 dark:text-purple-400 -mt-1 sm:-mt-2 transform -rotate-1">
+            sua essência
           </p>
         </div>
 
-        <!-- Abas Mobile (Visível em telas menores que lg) -->
-        <div class="flex lg:hidden items-center justify-center gap-1.5 mb-6 p-1 rounded-xl bg-stone-200/60 dark:bg-stone-900 border border-stone-300/60 dark:border-stone-800 max-w-sm mx-auto">
-          <button type="button" onclick="switchAnatomyTab('boca')" id="tabBtn-boca" class="anatomy-tab-btn flex-1 py-2 px-3 rounded-lg text-xs font-serif tracking-wider transition text-stone-600 dark:text-stone-400">
-            👄 Boca
-          </button>
-          <button type="button" onclick="switchAnatomyTab('orelha')" id="tabBtn-orelha" class="anatomy-tab-btn active flex-1 py-2 px-3 rounded-lg text-xs font-serif tracking-wider transition font-medium">
-            👂 Orelha
-          </button>
-          <button type="button" onclick="switchAnatomyTab('facial')" id="tabBtn-facial" class="anatomy-tab-btn flex-1 py-2 px-3 rounded-lg text-xs font-serif tracking-wider transition text-stone-600 dark:text-stone-400">
-            ✨ Facial
-          </button>
-        </div>
+        <p class="text-stone-600 dark:text-stone-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Joias exclusivas em Titânio e Aço Cirúrgico para quem valoriza estilo, brilho e conforto. Atendimento personalizado com hora marcada em nosso estúdio em São Paulo.
+        </p>
 
-        <!-- Grade com os 3 Mapas Juntos Lado a Lado (Desktop) e Abas (Mobile) -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-6 items-stretch pt-2">
-          
-          <!-- ==========================================
-               CARD 1: MAPA DA BOCA & LÍNGUA
-               ========================================== -->
-          <div id="anatomyCard-boca" class="anatomy-card hidden lg:flex flex-col justify-between">
-            <div class="poster-map-box flex-1 flex flex-col justify-between">
-              <!-- Facetas Geométricas -->
-              <div class="poster-geometric-facet"></div>
-              <div class="poster-geometric-facet-2"></div>
-
-              <!-- Cabeçalho Oficial do Pôster -->
-              <div class="text-center mb-3 relative z-10">
-                <div class="text-white text-[10px] sm:text-[11px] font-black tracking-[0.22em] uppercase">LOCAIS PARA</div>
-                <div class="text-fuchsia-400 text-lg sm:text-xl font-black tracking-[0.2em] uppercase drop-shadow-[0_0_10px_rgba(217,70,239,0.7)] -mt-0.5">PERFURAÇÃO</div>
-                <div class="text-white/90 text-[10px] font-extrabold tracking-[0.16em] uppercase -mt-0.5">(BOCA & LÍNGUA)</div>
-              </div>
-
-              <!-- Fotografia Real em Destaque no Topo (Largura Total da Coluna ~340px) -->
-              <div class="poster-photo-wrap w-full aspect-square relative shadow-xl mb-3 relative z-10">
-                <img src="img/mapa-boca-real.jpg" alt="Fotografia Anatômica dos Lábios e Língua sem Piercing" class="w-full h-full object-cover" loading="lazy" />
-
-                <!-- Pinos Interativos com Posicionamento Confortável (Sem Sobreposição) -->
-                <button type="button" id="pin-boca-4" onclick="filtrarPontoAnatomico('boca', 'madonna')" onmouseenter="syncAnatomyHover('boca', 4, true)" onmouseleave="syncAnatomyHover('boca', 4, false)" style="top: 34%; left: 33%;" class="poster-pin-btn" title="4 - Madonna">4</button>
-                <button type="button" id="pin-boca-6" onclick="filtrarPontoAnatomico('boca', 'medusa')" onmouseenter="syncAnatomyHover('boca', 6, true)" onmouseleave="syncAnatomyHover('boca', 6, false)" style="top: 27%; left: 50%;" class="poster-pin-btn" title="6 - Medusa">6</button>
-                <button type="button" id="pin-boca-5" onclick="filtrarPontoAnatomico('boca', 'monroe')" onmouseenter="syncAnatomyHover('boca', 5, true)" onmouseleave="syncAnatomyHover('boca', 5, false)" style="top: 34%; left: 67%;" class="poster-pin-btn" title="5 - Monroe">5</button>
-                <button type="button" id="pin-boca-7" onclick="filtrarPontoAnatomico('boca', 'lingua')" onmouseenter="syncAnatomyHover('boca', 7, true)" onmouseleave="syncAnatomyHover('boca', 7, false)" style="top: 45%; left: 50%;" class="poster-pin-btn" title="7 - Língua">7</button>
-                <button type="button" id="pin-boca-3" onclick="filtrarPontoAnatomico('boca', 'vertical-labret')" onmouseenter="syncAnatomyHover('boca', 3, true)" onmouseleave="syncAnatomyHover('boca', 3, false)" style="top: 57%; left: 50%;" class="poster-pin-btn" title="3 - Ashley">3</button>
-                <button type="button" id="pin-boca-1" onclick="filtrarPontoAnatomico('boca', 'labret-lateral')" onmouseenter="syncAnatomyHover('boca', 1, true)" onmouseleave="syncAnatomyHover('boca', 1, false)" style="top: 68%; left: 33%;" class="poster-pin-btn" title="1 - Labret Lateral">1</button>
-                <button type="button" id="pin-boca-2" onclick="filtrarPontoAnatomico('boca', 'labret-lateral')" onmouseenter="syncAnatomyHover('boca', 2, true)" onmouseleave="syncAnatomyHover('boca', 2, false)" style="top: 68%; left: 67%;" class="poster-pin-btn" title="2 - Labret Lateral">2</button>
-              </div>
-
-              <!-- Legenda em 2 Colunas Abaixo da Imagem -->
-              <div class="grid grid-cols-2 gap-1.5 mb-2.5 relative z-10">
-                <button type="button" id="legend-boca-1" onclick="filtrarPontoAnatomico('boca', 'labret-lateral')" onmouseenter="syncAnatomyHover('boca', 1, true)" onmouseleave="syncAnatomyHover('boca', 1, false)" class="poster-legend-item">
-                  <span class="legend-num">1</span> LABRET LAT.
-                </button>
-                <button type="button" id="legend-boca-5" onclick="filtrarPontoAnatomico('boca', 'monroe')" onmouseenter="syncAnatomyHover('boca', 5, true)" onmouseleave="syncAnatomyHover('boca', 5, false)" class="poster-legend-item">
-                  <span class="legend-num">5</span> MONROE
-                </button>
-                <button type="button" id="legend-boca-2" onclick="filtrarPontoAnatomico('boca', 'labret-lateral')" onmouseenter="syncAnatomyHover('boca', 2, true)" onmouseleave="syncAnatomyHover('boca', 2, false)" class="poster-legend-item">
-                  <span class="legend-num">2</span> LABRET LAT.
-                </button>
-                <button type="button" id="legend-boca-6" onclick="filtrarPontoAnatomico('boca', 'medusa')" onmouseenter="syncAnatomyHover('boca', 6, true)" onmouseleave="syncAnatomyHover('boca', 6, false)" class="poster-legend-item">
-                  <span class="legend-num">6</span> MEDUSA
-                </button>
-                <button type="button" id="legend-boca-3" onclick="filtrarPontoAnatomico('boca', 'vertical-labret')" onmouseenter="syncAnatomyHover('boca', 3, true)" onmouseleave="syncAnatomyHover('boca', 3, false)" class="poster-legend-item">
-                  <span class="legend-num">3</span> ASHLEY
-                </button>
-                <button type="button" id="legend-boca-7" onclick="filtrarPontoAnatomico('boca', 'lingua')" onmouseenter="syncAnatomyHover('boca', 7, true)" onmouseleave="syncAnatomyHover('boca', 7, false)" class="poster-legend-item">
-                  <span class="legend-num">7</span> LÍNGUA
-                </button>
-                <button type="button" id="legend-boca-4" onclick="filtrarPontoAnatomico('boca', 'madonna')" onmouseenter="syncAnatomyHover('boca', 4, true)" onmouseleave="syncAnatomyHover('boca', 4, false)" class="poster-legend-item">
-                  <span class="legend-num">4</span> MADONNA
-                </button>
-              </div>
-
-              <!-- Rodapé do Card -->
-              <div class="pt-2 border-t border-purple-800/40 relative z-10 flex items-center justify-between text-[11px]">
-                <button type="button" onclick="filtrarPontoAnatomico('boca', null)" class="text-fuchsia-300 hover:text-white font-medium transition flex items-center gap-1">
-                  <span>Ver todas da boca</span>
-                  <span>→</span>
-                </button>
-                <span class="text-[10px] text-purple-300/40 font-serif tracking-widest uppercase">NG STUDIO</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ==========================================
-               CARD 2: MAPA DA ORELHA (DESTAQUE CENTRAL)
-               ========================================== -->
-          <div id="anatomyCard-orelha" class="anatomy-card anatomy-card-highlight flex flex-col justify-between">
-            <span class="anatomy-badge-destaque">
-              ✦ Mais Procurado ✦
-            </span>
-
-            <div class="poster-map-box flex-1 flex flex-col justify-between">
-              <!-- Facetas Geométricas -->
-              <div class="poster-geometric-facet"></div>
-              <div class="poster-geometric-facet-2"></div>
-
-              <!-- Cabeçalho Oficial do Pôster -->
-              <div class="text-center mb-3 relative z-10">
-                <div class="text-white text-[10px] sm:text-[11px] font-black tracking-[0.22em] uppercase">LOCAIS PARA</div>
-                <div class="text-fuchsia-400 text-lg sm:text-xl font-black tracking-[0.2em] uppercase drop-shadow-[0_0_10px_rgba(217,70,239,0.7)] -mt-0.5">PERFURAÇÃO</div>
-                <div class="text-white/90 text-[10px] font-extrabold tracking-[0.16em] uppercase -mt-0.5">(ORELHA)</div>
-              </div>
-
-              <!-- Fotografia Real em Destaque no Topo (Largura Total da Coluna ~340px) -->
-              <div class="poster-photo-wrap w-full aspect-square relative shadow-xl mb-3 relative z-10">
-                <img src="img/mapa-orelha-real.jpg" alt="Fotografia Anatômica Real da Orelha sem Piercing" class="w-full h-full object-cover" loading="lazy" />
-
-                <!-- Pinos Interativos com Posicionamento Confortável (Sem Sobreposição) -->
-                <button type="button" id="pin-orelha-1" onclick="filtrarPontoAnatomico('orelha', 'lobulo')" onmouseenter="syncAnatomyHover('orelha', 1, true)" onmouseleave="syncAnatomyHover('orelha', 1, false)" style="top: 79%; left: 56%;" class="poster-pin-btn" title="1 - Primeiro Furo Lóbulo">1</button>
-                <button type="button" id="pin-orelha-2" onclick="filtrarPontoAnatomico('orelha', 'lobulo')" onmouseenter="syncAnatomyHover('orelha', 2, true)" onmouseleave="syncAnatomyHover('orelha', 2, false)" style="top: 71%; left: 47%;" class="poster-pin-btn" title="2 - Segundo Furo Lóbulo">2</button>
-                <button type="button" id="pin-orelha-3" onclick="filtrarPontoAnatomico('orelha', 'lobulo')" onmouseenter="syncAnatomyHover('orelha', 3, true)" onmouseleave="syncAnatomyHover('orelha', 3, false)" style="top: 63%; left: 41%;" class="poster-pin-btn" title="3 - Terceiro Furo Lóbulo">3</button>
-                <button type="button" id="pin-orelha-4" onclick="filtrarPontoAnatomico('orelha', 'tragus')" onmouseenter="syncAnatomyHover('orelha', 4, true)" onmouseleave="syncAnatomyHover('orelha', 4, false)" style="top: 54%; left: 65%;" class="poster-pin-btn" title="4 - Tragus">4</button>
-                <button type="button" id="pin-orelha-7" onclick="filtrarPontoAnatomico('orelha', 'conch')" onmouseenter="syncAnatomyHover('orelha', 7, true)" onmouseleave="syncAnatomyHover('orelha', 7, false)" style="top: 56%; left: 49%;" class="poster-pin-btn" title="7 - Conch">7</button>
-                <button type="button" id="pin-orelha-8" onclick="filtrarPontoAnatomico('orelha', 'daith')" onmouseenter="syncAnatomyHover('orelha', 8, true)" onmouseleave="syncAnatomyHover('orelha', 8, false)" style="top: 45%; left: 53%;" class="poster-pin-btn" title="8 - Daith">8</button>
-                <button type="button" id="pin-orelha-9" onclick="filtrarPontoAnatomico('orelha', 'rook')" onmouseenter="syncAnatomyHover('orelha', 9, true)" onmouseleave="syncAnatomyHover('orelha', 9, false)" style="top: 36%; left: 49%;" class="poster-pin-btn" title="9 - Rook">9</button>
-                <button type="button" id="pin-orelha-6" onclick="filtrarPontoAnatomico('orelha', 'anti-helix')" onmouseenter="syncAnatomyHover('orelha', 6, true)" onmouseleave="syncAnatomyHover('orelha', 6, false)" style="top: 32%; left: 60%;" class="poster-pin-btn" title="6 - Anti-Hélix">6</button>
-                <button type="button" id="pin-orelha-5" onclick="filtrarPontoAnatomico('orelha', 'flat')" onmouseenter="syncAnatomyHover('orelha', 5, true)" onmouseleave="syncAnatomyHover('orelha', 5, false)" style="top: 29%; left: 45%;" class="poster-pin-btn" title="5 - Flat">5</button>
-                <button type="button" id="pin-orelha-10" onclick="filtrarPontoAnatomico('orelha', 'midi-helix')" onmouseenter="syncAnatomyHover('orelha', 10, true)" onmouseleave="syncAnatomyHover('orelha', 10, false)" style="top: 48%; left: 32%;" class="poster-pin-btn" title="10 - Mid Hélix">10</button>
-                <button type="button" id="pin-orelha-11" onclick="filtrarPontoAnatomico('orelha', 'helix')" onmouseenter="syncAnatomyHover('orelha', 11, true)" onmouseleave="syncAnatomyHover('orelha', 11, false)" style="top: 18%; left: 41%;" class="poster-pin-btn" title="11 - Hélix">11</button>
-              </div>
-
-              <!-- Legenda em 2 Colunas Abaixo da Imagem -->
-              <div class="grid grid-cols-2 gap-1.5 mb-2.5 relative z-10">
-                <button type="button" id="legend-orelha-1" onclick="filtrarPontoAnatomico('orelha', 'lobulo')" onmouseenter="syncAnatomyHover('orelha', 1, true)" onmouseleave="syncAnatomyHover('orelha', 1, false)" class="poster-legend-item">
-                  <span class="legend-num">1</span> 1º LÓBULO
-                </button>
-                <button type="button" id="legend-orelha-7" onclick="filtrarPontoAnatomico('orelha', 'conch')" onmouseenter="syncAnatomyHover('orelha', 7, true)" onmouseleave="syncAnatomyHover('orelha', 7, false)" class="poster-legend-item">
-                  <span class="legend-num">7</span> CONCH
-                </button>
-                <button type="button" id="legend-orelha-2" onclick="filtrarPontoAnatomico('orelha', 'lobulo')" onmouseenter="syncAnatomyHover('orelha', 2, true)" onmouseleave="syncAnatomyHover('orelha', 2, false)" class="poster-legend-item">
-                  <span class="legend-num">2</span> 2º LÓBULO
-                </button>
-                <button type="button" id="legend-orelha-8" onclick="filtrarPontoAnatomico('orelha', 'daith')" onmouseenter="syncAnatomyHover('orelha', 8, true)" onmouseleave="syncAnatomyHover('orelha', 8, false)" class="poster-legend-item">
-                  <span class="legend-num">8</span> DAITH
-                </button>
-                <button type="button" id="legend-orelha-3" onclick="filtrarPontoAnatomico('orelha', 'lobulo')" onmouseenter="syncAnatomyHover('orelha', 3, true)" onmouseleave="syncAnatomyHover('orelha', 3, false)" class="poster-legend-item">
-                  <span class="legend-num">3</span> 3º LÓBULO
-                </button>
-                <button type="button" id="legend-orelha-9" onclick="filtrarPontoAnatomico('orelha', 'rook')" onmouseenter="syncAnatomyHover('orelha', 9, true)" onmouseleave="syncAnatomyHover('orelha', 9, false)" class="poster-legend-item">
-                  <span class="legend-num">9</span> ROOK
-                </button>
-                <button type="button" id="legend-orelha-4" onclick="filtrarPontoAnatomico('orelha', 'tragus')" onmouseenter="syncAnatomyHover('orelha', 4, true)" onmouseleave="syncAnatomyHover('orelha', 4, false)" class="poster-legend-item">
-                  <span class="legend-num">4</span> TRAGUS
-                </button>
-                <button type="button" id="legend-orelha-10" onclick="filtrarPontoAnatomico('orelha', 'midi-helix')" onmouseenter="syncAnatomyHover('orelha', 10, true)" onmouseleave="syncAnatomyHover('orelha', 10, false)" class="poster-legend-item">
-                  <span class="legend-num">10</span> MID HÉLIX
-                </button>
-                <button type="button" id="legend-orelha-5" onclick="filtrarPontoAnatomico('orelha', 'flat')" onmouseenter="syncAnatomyHover('orelha', 5, true)" onmouseleave="syncAnatomyHover('orelha', 5, false)" class="poster-legend-item">
-                  <span class="legend-num">5</span> FLAT
-                </button>
-                <button type="button" id="legend-orelha-11" onclick="filtrarPontoAnatomico('orelha', 'helix')" onmouseenter="syncAnatomyHover('orelha', 11, true)" onmouseleave="syncAnatomyHover('orelha', 11, false)" class="poster-legend-item">
-                  <span class="legend-num">11</span> HÉLIX
-                </button>
-                <button type="button" id="legend-orelha-6" onclick="filtrarPontoAnatomico('orelha', 'anti-helix')" onmouseenter="syncAnatomyHover('orelha', 6, true)" onmouseleave="syncAnatomyHover('orelha', 6, false)" class="poster-legend-item col-span-2">
-                  <span class="legend-num">6</span> ANTI-HÉLIX (FORWARD)
-                </button>
-              </div>
-
-              <!-- Rodapé do Card -->
-              <div class="pt-2 border-t border-purple-800/40 relative z-10 flex items-center justify-between text-[11px]">
-                <button type="button" onclick="filtrarPontoAnatomico('orelha', null)" class="text-fuchsia-300 hover:text-white font-medium transition flex items-center gap-1">
-                  <span>Ver todas da orelha</span>
-                  <span>→</span>
-                </button>
-                <span class="text-[10px] text-purple-300/40 font-serif tracking-widest uppercase">NG STUDIO</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ==========================================
-               CARD 3: MAPA FACIAL & NARIZ (DE FRENTE)
-               ========================================== -->
-          <div id="anatomyCard-facial" class="anatomy-card hidden lg:flex flex-col justify-between">
-            <div class="poster-map-box flex-1 flex flex-col justify-between">
-              <!-- Facetas Geométricas -->
-              <div class="poster-geometric-facet"></div>
-              <div class="poster-geometric-facet-2"></div>
-
-              <!-- Cabeçalho Oficial do Pôster -->
-              <div class="text-center mb-3 relative z-10">
-                <div class="text-white text-[10px] sm:text-[11px] font-black tracking-[0.22em] uppercase">LOCAIS PARA</div>
-                <div class="text-fuchsia-400 text-lg sm:text-xl font-black tracking-[0.2em] uppercase drop-shadow-[0_0_10px_rgba(217,70,239,0.7)] -mt-0.5">PERFURAÇÃO</div>
-                <div class="text-white/90 text-[10px] font-extrabold tracking-[0.16em] uppercase -mt-0.5">(FACIAL & NARIZ)</div>
-              </div>
-
-              <!-- Fotografia Real Frontal (Pessoa de Frente - Largura Total da Coluna ~340px) -->
-              <div class="poster-photo-wrap w-full aspect-square relative shadow-xl mb-3 relative z-10">
-                <img src="img/mapa-facial-real.jpg" alt="Fotografia Anatômica Real do Rosto Frontal de Frente sem Piercing" class="w-full h-full object-cover" loading="lazy" />
-
-                <!-- Pinos Interativos com Posicionamento Confortável no Rosto Frontal -->
-                <button type="button" id="pin-facial-3" onclick="filtrarPontoAnatomico('faciais', 'sobrancelha')" onmouseenter="syncAnatomyHover('facial', 3, true)" onmouseleave="syncAnatomyHover('facial', 3, false)" style="top: 25%; left: 67%;" class="poster-pin-btn" title="3 - Sobrancelha">3</button>
-                <button type="button" id="pin-facial-4" onclick="filtrarPontoAnatomico('faciais', 'bridge')" onmouseenter="syncAnatomyHover('facial', 4, true)" onmouseleave="syncAnatomyHover('facial', 4, false)" style="top: 36%; left: 50%;" class="poster-pin-btn" title="4 - Bridge">4</button>
-                <button type="button" id="pin-facial-1" onclick="filtrarPontoAnatomico('nariz', 'aba-nasal')" onmouseenter="syncAnatomyHover('facial', 1, true)" onmouseleave="syncAnatomyHover('facial', 1, false)" style="top: 57%; left: 58%;" class="poster-pin-btn" title="1 - Aba Nasal">1</button>
-                <button type="button" id="pin-facial-2" onclick="filtrarPontoAnatomico('nariz', 'septo')" onmouseenter="syncAnatomyHover('facial', 2, true)" onmouseleave="syncAnatomyHover('facial', 2, false)" style="top: 61%; left: 50%;" class="poster-pin-btn" title="2 - Septo">2</button>
-                <button type="button" id="pin-facial-5" onclick="filtrarPontoAnatomico('faciais', 'microdermal')" onmouseenter="syncAnatomyHover('facial', 5, true)" onmouseleave="syncAnatomyHover('facial', 5, false)" style="top: 48%; left: 30%;" class="poster-pin-btn" title="5 - Microdermal">5</button>
-                <button type="button" id="pin-facial-6" onclick="filtrarPontoAnatomico('faciais', 'surface')" onmouseenter="syncAnatomyHover('facial', 6, true)" onmouseleave="syncAnatomyHover('facial', 6, false)" style="top: 32%; left: 16%;" class="poster-pin-btn" title="6 - Surface">6</button>
-              </div>
-
-              <!-- Legenda em 2 Colunas Abaixo da Imagem -->
-              <div class="grid grid-cols-2 gap-1.5 mb-2.5 relative z-10">
-                <button type="button" id="legend-facial-1" onclick="filtrarPontoAnatomico('nariz', 'aba-nasal')" onmouseenter="syncAnatomyHover('facial', 1, true)" onmouseleave="syncAnatomyHover('facial', 1, false)" class="poster-legend-item">
-                  <span class="legend-num">1</span> ABA NASAL
-                </button>
-                <button type="button" id="legend-facial-4" onclick="filtrarPontoAnatomico('faciais', 'bridge')" onmouseenter="syncAnatomyHover('facial', 4, true)" onmouseleave="syncAnatomyHover('facial', 4, false)" class="poster-legend-item">
-                  <span class="legend-num">4</span> BRIDGE
-                </button>
-                <button type="button" id="legend-facial-2" onclick="filtrarPontoAnatomico('nariz', 'septo')" onmouseenter="syncAnatomyHover('facial', 2, true)" onmouseleave="syncAnatomyHover('facial', 2, false)" class="poster-legend-item">
-                  <span class="legend-num">2</span> SEPTO
-                </button>
-                <button type="button" id="legend-facial-5" onclick="filtrarPontoAnatomico('faciais', 'microdermal')" onmouseenter="syncAnatomyHover('facial', 5, true)" onmouseleave="syncAnatomyHover('facial', 5, false)" class="poster-legend-item">
-                  <span class="legend-num">5</span> MICRODERMAL
-                </button>
-                <button type="button" id="legend-facial-3" onclick="filtrarPontoAnatomico('faciais', 'sobrancelha')" onmouseenter="syncAnatomyHover('facial', 3, true)" onmouseleave="syncAnatomyHover('facial', 3, false)" class="poster-legend-item">
-                  <span class="legend-num">3</span> SOBRANCELHA
-                </button>
-                <button type="button" id="legend-facial-6" onclick="filtrarPontoAnatomico('faciais', 'surface')" onmouseenter="syncAnatomyHover('facial', 6, true)" onmouseleave="syncAnatomyHover('facial', 6, false)" class="poster-legend-item">
-                  <span class="legend-num">6</span> SURFACE
-                </button>
-              </div>
-
-              <!-- Rodapé do Card -->
-              <div class="pt-2 border-t border-purple-800/40 relative z-10 flex items-center justify-between text-[11px]">
-                <button type="button" onclick="filtrarPontoAnatomico('faciais', null)" class="text-fuchsia-300 hover:text-white font-medium transition flex items-center gap-1">
-                  <span>Ver todas faciais</span>
-                  <span>→</span>
-                </button>
-                <span class="text-[10px] text-purple-300/40 font-serif tracking-widest uppercase">NG STUDIO</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Ações e Conversão Abaixo dos 3 Mapas -->
-        <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 max-w-xl mx-auto">
-          <a href="#catalogo" onclick="setRegiaoFilter('todas')" class="btn-gold w-full sm:w-auto text-center px-8 py-3.5 flex items-center justify-center gap-2">
-            <span>EXPLORAR JOIAS NO CATÁLOGO</span>
+        <!-- Ações e Citação (Empilhamento Fluido em Telas Pequenas) -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a href="#catalogo" class="btn-gold w-full sm:w-auto text-center">
+            <span>VER CATÁLOGO COMPLETO</span>
             <span>➔</span>
           </a>
-          <a href="https://wa.me/5511954107870?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20uma%20perfura%C3%A7%C3%A3o%20e%20agendar%20um%20hor%C3%A1rio%20no%20est%C3%BAdio." target="_blank" rel="noopener noreferrer" class="btn-outline-gold w-full sm:w-auto text-center px-8 py-3.5 flex items-center justify-center gap-2">
-            <span>💬</span>
-            <span>AGENDAR NO WHATSAPP</span>
+          <a href="#materiais" class="btn-outline-gold w-full sm:w-auto text-center">
+            Conhecer os Metais
           </a>
         </div>
 
@@ -634,7 +398,7 @@
     <!-- ==========================================================================
          FILTROS POR ANATOMIA REAL DE BODY PIERCING
          ========================================================================== -->
-    <section class="py-3.5 sm:py-5 border-b border-stone-200/80 dark:border-stone-800/80 sticky top-16 sm:top-20 bg-stone-50/95 dark:bg-stone-950/95 backdrop-blur-md z-30">
+    <section class="py-5 sm:py-6 border-b border-stone-200/80 dark:border-stone-800/80 sticky top-18 sm:top-20 bg-stone-50/95 dark:bg-stone-950/95 backdrop-blur-md z-30">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="flex items-center justify-between gap-4 pb-2">
@@ -653,7 +417,7 @@
         </div>
 
         <!-- Botões Principais das 4 Regiões Anatômicas Reais -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-2 scroll-touch-x pt-1">
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-1">
           <button class="filter-btn active" data-regiao="todas">Todas as Joias</button>
           <button class="filter-btn" data-regiao="orelha">👂 Orelha</button>
           <button class="filter-btn" data-regiao="nariz">👃 Nariz</button>
@@ -662,7 +426,7 @@
         </div>
 
         <!-- Chips Dinâmicos de Sublocais Anatômicos -->
-        <div id="sublocaisChipsContainer" class="flex items-center gap-1.5 overflow-x-auto pt-2 pb-1 scroll-touch-x">
+        <div id="sublocaisChipsContainer" class="flex items-center gap-1.5 overflow-x-auto pt-2 pb-1 scrollbar-none">
           <!-- Inserido dinamicamente via js/main.js quando uma região for selecionada -->
         </div>
 
@@ -745,7 +509,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Card Titânio ASTM F-136 -->
           <div class="bg-white dark:bg-stone-900 p-8 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col justify-between">
@@ -784,6 +548,27 @@
               <li>✓ Perfeito para trocas do dia a dia</li>
             </ul>
           </div>
+
+          <!-- Card Zircônias Cúbicas 5A -->
+          <div class="bg-white dark:bg-stone-900 p-8 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-700 dark:text-purple-400 flex items-center justify-center mb-6 font-serif font-medium text-lg border border-purple-500/20">
+                💎
+              </div>
+              <h3 class="font-serif text-xl font-medium text-stone-900 dark:text-stone-100">Zircônias Lapidadas</h3>
+              <span class="text-[11px] text-purple-700 dark:text-purple-400 font-medium uppercase tracking-wider block mt-1">Brilho Radiante & Cravação Firme</span>
+              <p class="text-xs text-stone-600 dark:text-stone-400 mt-4 leading-relaxed">
+                Pedras com lapidação facetada de joalheria (brilhante, gota, navete e coração). Todas cravadas com segurança para garantir brilho intenso e duradouro no dia a dia.
+              </p>
+            </div>
+            <ul class="mt-6 pt-6 border-t border-stone-100 dark:border-stone-800 text-xs space-y-2 text-stone-500 dark:text-stone-400">
+              <li>✓ Brilho semelhante ao diamante</li>
+              <li>✓ Cravação mecânica segura e resistente</li>
+              <li>✓ Peças elegantes para todas as ocasiões</li>
+            </ul>
+          </div>
+
+        </div>
 
         </div>
 
@@ -895,11 +680,9 @@
         
         <!-- Coluna 1: Marca -->
         <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full overflow-hidden bg-black border border-purple-500/30 flex-shrink-0 flex items-center justify-center shadow-md">
-              <img src="img/logo-icone.png" alt="NG Piercing" class="w-full h-full object-contain" />
-            </div>
-            <img src="img/logo-texto-white.png" alt="NG Piercing Body Piercing" class="h-6 w-auto object-contain" />
+          <div class="flex flex-col">
+            <span class="font-serif text-xl font-medium tracking-[0.2em] text-white">NG PIERCING</span>
+            <span class="text-[9px] tracking-[0.45em] text-purple-400 uppercase -mt-0.5 font-medium">JOIAS</span>
           </div>
           <p class="text-xs text-stone-400 leading-relaxed">
             Joalheria corporal em Titânio ASTM F-136 e Aço Cirúrgico. Elegância, precisão e bem-estar.
@@ -1058,24 +841,6 @@
       </div>
     </div>
   </div>
-
-  <!-- ==========================================================================
-       BOTÃO FLUTUANTE OFICIAL DO WHATSAPP (CONVERSÃO MOBILE & DESKTOP)
-       ========================================================================== -->
-  <a href="https://wa.me/5511954107870?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20NG%20Piercing%20e%20gostaria%20de%20tirar%20d%C3%BAvidas%20e%20agendar%20um%20hor%C3%A1rio." 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="whatsapp-float-btn group" 
-     id="whatsappFloatBtn"
-     aria-label="Falar com a Piercer no WhatsApp Oficial">
-    <span class="whatsapp-float-pulse"></span>
-    <span class="whatsapp-float-icon">
-      <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-5.805 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-      </svg>
-    </span>
-    <span class="whatsapp-float-text">Agendar / WhatsApp</span>
-  </a>
 
   <!-- CONTAINER DE TOASTS -->
   <div id="toastContainer" class="toast-container"></div>

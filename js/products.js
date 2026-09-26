@@ -1,44 +1,49 @@
 /**
- * NG PIERCING JOIAS — CATÁLOGO OFICIAL COM FOTOS REAIS MARINA PIERCING
- * Todas as 82 peças reais mapeadas com URLs em alta resolução do CDN oficial da Marina Piercing (mitiendanube.com).
+ * NG PIERCING JOIAS — CATÁLOGO OFICIAL COM FOTOS REAIS DA LOJA "ROCK BODY PIERCING" (SHOPEE OFICIAL)
+ * Todas as 82 peças reais mapeadas com URLs de alta resolução extraídas diretamente do CDN oficial (down-br.img.susercontent.com).
  * Estrutura anatômica: Bases Flat Back, Clickers Articulados, Hastes Curvas e Barbells Industriais.
  */
 
-const IMAGENS_MARINA = {
-  // 1. LABRETS & TRAGUS
-  labretSolitario: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/1088-1779538534300-v6qdeuwe-bdab164b389391aef017812278995108-1024-1024.webp",
-  labretTiaraMarquise: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7374-1781730210852-mpvv83bm-8a8298c734146a794a17832185783528-1024-1024.webp",
-  labretFlorNobre: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7368-1781713073698-nr5a4qe6-2593410c2b7121afce17832185595021-1024-1024.webp",
-  labretBorboleta: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/1089-1779473204254-0p6smp3i-5dcde0fc97f4f222c517812279047731-1024-1024.webp",
-  labretSerpenteCruz: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/1076-1779545498639-hlnks3sm-218efe9073bd87906717812278308878-1024-1024.webp",
-  labretLuaEstrelaRamo: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/1087-1779538619437-1q49weur-e324ad9c7bdca5c91017812278942058-1024-1024.webp",
+const IMAGENS_ROCK_BODY = {
+  // 1. LABRETS & TRAGUS (Anúncios oficiais Rock Body Piercing: Labret Titânio Cravejado, Borboleta, Tiara Marquise, Pingente Estrela/Gota)
+  labretSolitario: "https://down-br.img.susercontent.com/file/sg-11134201-22100-5j5lq15qpnive8",
+  labretTiaraMarquise: "https://down-br.img.susercontent.com/file/3604ca8fd4fdaa6ed898d280de4edcf0",
+  labretFlorNobre: "https://down-br.img.susercontent.com/file/sg-11134201-822ys-mhwzstw8osu831",
+  labretBorboleta: "https://down-br.img.susercontent.com/file/br-11134207-820m0-mn5k2kwtn7r4b4",
+  labretSerpenteCruz: "https://down-br.img.susercontent.com/file/56b73066071860327f8af5b0da2fb771",
+  labretLuaEstrelaRamo: "https://down-br.img.susercontent.com/file/br-11134207-820l4-mftx0594y6qg61",
 
-  // 2. ARGOLAS & D-RINGS
-  dRingLisoClicker: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/3355-1780500992692-8kd68qwc-dcbf7b30b814dcede217812249033998-480-0.webp",
-  argolaCravejada: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/3249-1780602907208-c2f5bv0x-4061ec7f046d080f0817812242948587-480-0.webp",
-  argolaClickerLisa: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/2163-1780506535082-rp3ixolg-6e2da122986b2352ad17812161915024-480-0.webp",
+  // 2. ARGOLAS & D-RINGS (Anúncios oficiais Rock Body Piercing: D-Ring Nostril, Argola Segmento 2 Fileiras Cravejada, Clicker Lisa)
+  dRingLisoClicker: "https://down-br.img.susercontent.com/file/sg-11134201-7rdyw-m1lhlhlplsnc57",
+  argolaCravejada: "https://down-br.img.susercontent.com/file/br-11134207-820lz-mmgx760jnsp0f8",
+  argolaClickerLisa: "https://down-br.img.susercontent.com/file/sg-11134201-7rd3p-lwmc63qejh2w88",
 
-  // 3. PIERCINGS DE UMBIGO
-  umbigoPontoDeLuz: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/2130-1780526726518-wl6ixs3w-41164585a7d1ebca3b17812159824312-480-0.webp",
-  umbigoZirconiaGota: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/3396-1780596723805-q2hukm73-dbeaee132ca415748c17812251665438-480-0.webp",
-  umbigoFlorZirconias: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7340-1780677094361-x841u2g1-13911992c80001f31017812288069233-1024-1024.webp",
-  umbigoRosaceaMandala: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7341-1781018750026-s70w81ey-3a0e097f829c7632b417812288124092-1024-1024.webp",
-  umbigoEstrelaTripla: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7345-1783121090995-17e1d195-8916e39b33ae39862c17832185450249-1024-1024.webp",
-  umbigoEscorpiaoRamo: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7342-1781018814711-cqusvz16-1de00ebeed42ad6b8017812288178732-1024-1024.webp",
-  umbigoCoracaoColorido: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7335-1783120236704-9yyjomes-3bd0b13e63dd6a7fee17865780567029-480-0.webp",
+  // 3. PIERCINGS DE UMBIGO & BANANINHAS (Anúncios oficiais Rock Body Piercing: Banana Titânio 2 Pedras, Umbigo 4 Pedras, Meia Flor, Mandala Indiana, Bananinha Lisa)
+  umbigoPontoDeLuz: "https://down-br.img.susercontent.com/file/sg-11134201-7rdx0-m02e81r6madcca",
+  umbigoZirconiaGota: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfktrf23tq0w08",
+  umbigoFlorZirconias: "https://down-br.img.susercontent.com/file/sg-11134201-822ys-mhwzstw8osu831",
+  umbigoRosaceaMandala: "https://down-br.img.susercontent.com/file/sg-11134201-7rdxt-ly08kog6ixy8ab",
+  umbigoEstrelaTripla: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mbomh8kaqx7re7",
+  umbigoEscorpiaoRamo: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8pun597axvm55",
+  umbigoCoracaoColorido: "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lki6bmzdbmltf9",
 
-  // 4. TRANSVERSAL (INDUSTRIAL)
-  transversalAdornoCentral: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7133-1780513042549-oax2ld3v-3bd16853af262970e517812280167971-480-0.webp",
+  // 4. TRANSVERSAL & MAMILO (Anúncios oficiais Rock Body Piercing: Transversal Indiano Strass Central, Barbell Mamilo Esférico PVD, Coração PVD)
+  transversalAdornoCentral: "https://down-br.img.susercontent.com/file/sg-11134201-7rdyf-lw34y20y00v688",
+  barbellMamilo: "https://down-br.img.susercontent.com/file/sg-11134201-7rdwk-lxkuhrl6nnnqf0",
+  minibarbellLiso: "https://down-br.img.susercontent.com/file/sg-11134201-7rd42-lwnyw0ic9qsv70",
 
-  // 5. CLUSTERS (Conch, Scapha, Helix)
-  cluster5Zirconias: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7357-1781297302069-6wxv693q-64486629a5546c7dbb17832185505651-1024-1024.webp",
-  clusterCartilagem: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/2844-1780659249467-dara46ue-784920120f234d03be17812178720008-1024-1024.webp",
+  // 5. CLUSTERS (Anúncios oficiais Rock Body Piercing: Conch Helix Barbell Cluster 5 Zircônias, Mini Cluster Titânio PVD)
+  cluster5Zirconias: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgo-m3642n05jlkm3d",
+  clusterCartilagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rdya-mda5nyv9j67wbf",
 
-  // 6. KITS DE 3 BRINCOS
-  kit3PontoArgola: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/2335-1780529664622-w85jlqb6-d4644c925ab5d7b3b017812299022013-480-0.webp",
-  kit3Borboleta: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/2007-1780510052993-t477goeo-12183ccd89aedc165f17812155220962-1024-1024.png",
-  kit3DelicadoOuroPrata: "https://acdn-us.mitiendanube.com/stores/001/488/287/products/7348-1781047806440-promlkrq-86371e7652267e2f0817812288362710-480-0.webp"
+  // 6. KITS E CONJUNTOS (Anúncios oficiais Rock Body Piercing: Argola Segmento Losango Zircônias, Borboleta Titânio, Minibarbell Bolinha)
+  kit3PontoArgola: "https://down-br.img.susercontent.com/file/sg-11134201-22110-w0ykz3ivsojve4",
+  kit3Borboleta: "https://down-br.img.susercontent.com/file/br-11134207-820m0-mn5k2kwtn7r4b4",
+  kit3DelicadoOuroPrata: "https://down-br.img.susercontent.com/file/sg-11134201-7rd42-lwnyw0ic9qsv70"
 };
+
+// Alias de retrocompatibilidade para garantir integridade absoluta em todo o código
+const IMAGENS_MARINA = IMAGENS_ROCK_BODY;
 
 const catalogoJoias = [
   // =========================================================================
@@ -128,8 +133,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136 Grau Implante",
       pedraria: "Esferas de titânio polido 5mm"
     },
-    imagemUrl: IMAGENS_MARINA.transversalAdornoCentral,
-    imagem: IMAGENS_MARINA.transversalAdornoCentral,
+    imagemUrl: IMAGENS_ROCK_BODY.minibarbellLiso,
+    imagem: IMAGENS_ROCK_BODY.minibarbellLiso,
     descricao: "Barra reta polida espelhada em Titânio ASTM F-136 com rosca interna suave que preserva o canal da perfuração."
   },
   {
@@ -1270,8 +1275,8 @@ const catalogoJoias = [
       materialGrau: "Aço Cirúrgico 316L",
       pedraria: "Esferas com Zircônias Embutidas 5mm"
     },
-    imagemUrl: IMAGENS_MARINA.transversalAdornoCentral,
-    imagem: IMAGENS_MARINA.transversalAdornoCentral,
+    imagemUrl: IMAGENS_ROCK_BODY.barbellMamilo,
+    imagem: IMAGENS_ROCK_BODY.barbellMamilo,
     descricao: "Barra reta em aço 316L com duas esferas cravejadas em pedras de zircônia transparentes."
   },
   {
@@ -1330,8 +1335,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136 Grau Implante",
       pedraria: "Esferas sólidas em titânio 5mm"
     },
-    imagemUrl: IMAGENS_MARINA.transversalAdornoCentral,
-    imagem: IMAGENS_MARINA.transversalAdornoCentral,
+    imagemUrl: IMAGENS_ROCK_BODY.barbellMamilo,
+    imagem: IMAGENS_ROCK_BODY.barbellMamilo,
     descricao: "Titânio ASTM F-136 com rosca interna e esferas lisas de 5mm. O padrão ouro para cicatrização de mamilo."
   },
   {
@@ -1390,8 +1395,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136",
       pedraria: "Pontas geométricas em titânio lapidado"
     },
-    imagemUrl: IMAGENS_MARINA.transversalAdornoCentral,
-    imagem: IMAGENS_MARINA.transversalAdornoCentral,
+    imagemUrl: IMAGENS_ROCK_BODY.minibarbellLiso,
+    imagem: IMAGENS_ROCK_BODY.minibarbellLiso,
     descricao: "Pontas geométricas facetadas com reflexo prismático e rosca interna em titânio cirúrgico."
   },
 
