@@ -548,7 +548,7 @@ function abrirQuickView(id) {
       <div class="rounded-xl overflow-hidden bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 aspect-square">
         <img src="${joia.imagemUrl || joia.imagem}" 
              alt="${joia.nome}" 
-             class="w-full h-full object-cover" 
+             class="w-full h-full object-cover modal-product-zoom" 
              onerror="this.onerror=null; this.src='https://acdn-us.mitiendanube.com/stores/001/488/287/products/1088-1779538534300-v6qdeuwe-bdab164b389391aef017812278995108-1024-1024.webp';" />
       </div>
 

@@ -1,6 +1,6 @@
 /**
- * NG PIERCING JOIAS — CATÁLOGO OFICIAL COM FOTOS REAIS DA LOJA "ROCK BODY PIERCING" (SHOPEE OFICIAL)
- * Todas as 82 peças reais mapeadas com URLs de alta resolução extraídas diretamente do CDN oficial (down-br.img.susercontent.com).
+ * NG PIERCING JOIAS — CATÁLOGO OFICIAL EXCLUSIVO NG STUDIO
+ * Todas as 82 peças reais mapeadas com fotos de alta resolução.
  * Estrutura anatômica: Bases Flat Back, Clickers Articulados, Hastes Curvas e Barbells Industriais.
  */
 
