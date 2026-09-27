@@ -375,6 +375,7 @@ function renderVitrine() {
           <img src="${joia.imagemUrl || joia.imagem}" 
                alt="${joia.nome} em ${joia.material}" 
                loading="lazy" 
+               onload="if(window.cleanImageElement)window.cleanImageElement(this)" 
                onerror="this.onerror=null; this.src='https://acdn-us.mitiendanube.com/stores/001/488/287/products/1088-1779538534300-v6qdeuwe-bdab164b389391aef017812278995108-1024-1024.webp';" />
           ${joia.destaque ? `
           <div class="absolute top-3 left-3 z-10">
@@ -549,6 +550,7 @@ function abrirQuickView(id) {
         <img src="${joia.imagemUrl || joia.imagem}" 
              alt="${joia.nome}" 
              class="w-full h-full object-cover modal-product-zoom" 
+             onload="if(window.cleanImageElement)window.cleanImageElement(this)" 
              onerror="this.onerror=null; this.src='https://acdn-us.mitiendanube.com/stores/001/488/287/products/1088-1779538534300-v6qdeuwe-bdab164b389391aef017812278995108-1024-1024.webp';" />
       </div>
 
@@ -593,7 +595,6 @@ function abrirQuickView(id) {
             ${spec.tipoFecho ? `<div><strong class="text-stone-800 dark:text-stone-200">Tipo de Fecho:</strong> ${spec.tipoFecho}</div>` : ''}
             ${joia.espessura ? `<div><strong class="text-stone-800 dark:text-stone-200">Calibre:</strong> ${joia.espessura}</div>` : ''}
             ${joia.diametro ? `<div><strong class="text-stone-800 dark:text-stone-200">Dimensões:</strong> ${joia.diametro}</div>` : ''}
-            ${joia.indicacao ? `<div><strong class="text-stone-800 dark:text-stone-200">Local Recomendado:</strong> ${joia.indicacao}</div>` : ''}
           </div>
 
           <!-- AVISO OBRIGATÓRIO EM LETRAS TOTALMENTE MAIÚSCULAS -->

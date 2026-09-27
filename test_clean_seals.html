@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste de Remoção dos Selos G23 / Garantia</title>
+  <style>
+    body { background: #1a1a1a; color: #fff; font-family: sans-serif; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 24px; }
+    .item { background: #2a2a2a; border-radius: 8px; padding: 12px; border: 1px solid #444; }
+    .item h3 { margin: 0 0 10px 0; font-size: 14px; color: #f0a500; }
+    .comparison { display: flex; gap: 10px; }
+    .comparison > div { flex: 1; text-align: center; }
+    .comparison img, .comparison canvas { width: 100%; height: 240px; object-fit: contain; background: #fff; border-radius: 4px; border: 1px solid #555; }
+    .label { font-size: 11px; color: #aaa; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Comparação: Antes vs Depois da Remoção dos Selos</h1>
+  <div id="grid" class="grid"></div>
+
+  <script>
+    const imagesToClean = [
+      { key: "labretSolitario", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfbbjevgg3yf33", pos: "bottom-right" },
+      { key: "labretFlorNobre", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfu59iadbbif77", pos: "top-left" },
+      { key: "labretBorboleta", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfzurpgn8etgcd", pos: "top-left" },
+      { key: "labretLuaEstrelaRamo", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfcvs02va613a3", pos: "top-left" },
+      { key: "dRingLisoClicker", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfugdaj1pret23", pos: "top-left" },
+      { key: "argolaPedrasLateral", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mg2wq7pb8mpse1", pos: "top-left" },
+      { key: "umbigoZirconiaGota", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhgww729orup5f", pos: "top-right" },
+      { key: "umbigoFlorZirconias", url: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mj2yontbcr9e69", pos: "top-center" },
+      { key: "umbigoRosaceaMandala", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfzy0lfj5tl17c", pos: "top-left" },
+      { key: "umbigoEscorpiaoRamo", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-miizefp5lnnl4f", pos: "top-left" },
+      { key: "transversalAdornoCentral", url: "https://down-br.img.susercontent.com/file/br-11134207-820mh-mmbtni4u3t3491", pos: "top-left" },
+      { key: "ferraduraLisa", url: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfmsz6wfmeww40", pos: "top-left" },
+      { key: "nostrilPontoLuz", url: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mit7j03anyf759", pos: "top-left" }
+    ];
+
+    const grid = document.getElementById('grid');
+
+    imagesToClean.forEach((item, index) => {
+      const container = document.createElement('div');
+      container.className = 'item';
+      container.id = 'clean-item-' + index;
+
+      container.innerHTML = `
+        <h3>${index + 1}. ${item.key} (${item.pos})</h3>
+        <div class="comparison">
+          <div>
+            <img src="${item.url}" crossorigin="anonymous" id="orig-${index}" />
+            <div class="label">Original (Com Selo)</div>
+          </div>
+          <div>
+            <canvas id="canvas-${index}"></canvas>
+            <div class="label">Limpa (Sem Selo)</div>
+          </div>
+        </div>
+      `;
+      grid.appendChild(container);
+
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.onload = () => {
+        const canvas = document.getElementById(`canvas-${index}`);
+        canvas.width = img.naturalWidth || img.width;
+        canvas.height = img.naturalHeight || img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const W = canvas.width;
+        const H = canvas.height;
+
+        // Limpeza cirúrgica do selo baseada na posição e dimensões exatas de cada peça
+        ctx.fillStyle = '#ffffff';
+
+        if (item.key === 'labretFlorNobre') {
+          // O selo SOLID G23 TITANIUM tem aprox 23% de largura e 15% de altura no canto superior esquerdo
+          ctx.fillRect(0, 0, W * 0.24, H * 0.15);
+        } else if (item.key === 'argolaPedrasLateral') {
+          // Selo circular G23 TITANIUM no canto superior esquerdo (x: 0 a 36%, y: 0 a 35%)
+          // As argolas começam abaixo de y = 40%
+          ctx.fillRect(0, 0, W * 0.36, H * 0.35);
+        } else if (item.key === 'umbigoFlorZirconias') {
+          // Selo circular G23 TITANIUM no topo (x: 28% a 54%, y: 0 a 24%)
+          // Fica entre as duas hastes, ambas começam abaixo de y = 27%
+          ctx.fillRect(W * 0.28, 0, W * 0.26, H * 0.24);
+        } else if (item.key === 'dRingLisoClicker') {
+          // Selo SOLID G23 TITANIUM com resíduo à direita (cobre x: 0 a 35%, y: 0 a 28%)
+          ctx.fillRect(0, 0, W * 0.35, H * 0.28);
+        } else if (item.pos === 'top-right') {
+          // Selo G23 TITANIUM no canto superior direito (umbigoZirconiaGota)
+          ctx.fillRect(W * 0.68, 0, W * 0.32, H * 0.25);
+        } else if (item.pos === 'top-left') {
+          // Selos no canto superior esquerdo para os demais itens
+          ctx.fillRect(0, 0, W * 0.30, H * 0.28);
+        } else if (item.pos === 'bottom-right') {
+          // Selo 100% Titânio Garantia no canto inferior direito
+          ctx.fillRect(W * 0.65, H * 0.72, W * 0.35, H * 0.28);
+        }
+      };
+      img.src = item.url;
+    });
+  </script>
+</body>
+</html>

@@ -177,7 +177,7 @@ class ShoppingCart {
 
       return `
         <div class="flex items-center gap-3 py-3 border-b border-stone-200 dark:border-stone-800">
-          <img src="${item.imagem}" alt="${item.nome}" class="w-16 h-16 object-cover rounded-lg bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800" />
+          <img src="${item.imagem}" alt="${item.nome}" onload="if(window.cleanImageElement)window.cleanImageElement(this)" class="w-16 h-16 object-cover rounded-lg bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800" />
           <div class="flex-1 min-w-0">
             <h4 class="font-sans text-xs sm:text-sm font-medium tracking-[0.03em] uppercase text-stone-900 dark:text-stone-100 truncate">${item.nome}</h4>
             <div class="flex items-center gap-2 mt-1">

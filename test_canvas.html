@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Canvas CORS Test</title></head>
+<body>
+<canvas id="c"></canvas>
+<div id="status">Loading...</div>
+<script>
+  const img = new Image();
+  img.crossOrigin = "anonymous";
+  img.onload = () => {
+    const c = document.getElementById('c');
+    c.width = img.width;
+    c.height = img.height;
+    const ctx = c.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    try {
+      const data = ctx.getImageData(0, 0, 10, 10);
+      const dataUrl = c.toDataURL('image/jpeg', 0.95);
+      document.getElementById('status').innerText = 'CORS_SUCCESS: ' + img.width + 'x' + img.height + ', len=' + dataUrl.length;
+    } catch(e) {
+      document.getElementById('status').innerText = 'CORS_ERROR: ' + e.message;
+    }
+  };
+  img.onerror = (e) => {
+    document.getElementById('status').innerText = 'LOAD_ERROR';
+  };
+  img.src = "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhgww729orup5f";
+</script>
+</body>
+</html>

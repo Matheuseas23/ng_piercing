@@ -4,46 +4,62 @@
  * Estrutura anatômica: Bases Flat Back, Clickers Articulados, Hastes Curvas e Barbells Industriais.
  */
 
-const IMAGENS_ROCK_BODY = {
-  // 1. LABRETS & TRAGUS (Anúncios oficiais Rock Body Piercing: Labret Titânio Cravejado, Borboleta, Tiara Marquise, Pingente Estrela/Gota)
-  labretSolitario: "https://down-br.img.susercontent.com/file/sg-11134201-22100-5j5lq15qpnive8",
-  labretTiaraMarquise: "https://down-br.img.susercontent.com/file/3604ca8fd4fdaa6ed898d280de4edcf0",
-  labretFlorNobre: "https://down-br.img.susercontent.com/file/sg-11134201-822ys-mhwzstw8osu831",
-  labretBorboleta: "https://down-br.img.susercontent.com/file/br-11134207-820m0-mn5k2kwtn7r4b4",
-  labretSerpenteCruz: "https://down-br.img.susercontent.com/file/56b73066071860327f8af5b0da2fb771",
-  labretLuaEstrelaRamo: "https://down-br.img.susercontent.com/file/br-11134207-820l4-mftx0594y6qg61",
+const IMAGENS_LOJA_PIERCING = {
+  // 1. LABRETS & TRAGUS (Anúncios oficiais Loja De Piercing: Labret Titânio Cravejado, Ponto de Luz, Borboleta, Tiara Marquise, Cobra, Estrela)
+  labretSolitario: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfbbjevgg3yf33",
+  labretTiaraMarquise: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhaw940ar09381",
+  labretFlorNobre: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfu59iadbbif77",
+  labretBorboleta: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfzurpgn8etgcd",
+  labretSerpenteCruz: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhfda9ytb56t65",
+  labretLuaEstrelaRamo: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfcvs02va613a3",
+  labretCoracao: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mirmfh2flr7m67",
+  labretEstrela: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfcvs02va613a3",
+  labretCobra: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhfda9ytb56t65",
+  labretCruz: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhawz70bkxz86c",
 
-  // 2. ARGOLAS & D-RINGS (Anúncios oficiais Rock Body Piercing: D-Ring Nostril, Argola Segmento 2 Fileiras Cravejada, Clicker Lisa)
-  dRingLisoClicker: "https://down-br.img.susercontent.com/file/sg-11134201-7rdyw-m1lhlhlplsnc57",
-  argolaCravejada: "https://down-br.img.susercontent.com/file/br-11134207-820lz-mmgx760jnsp0f8",
-  argolaClickerLisa: "https://down-br.img.susercontent.com/file/sg-11134201-7rd3p-lwmc63qejh2w88",
+  // 2. ARGOLAS & D-RINGS (Anúncios oficiais Loja De Piercing: Clicker Titânio Cravejada Zircônias, Clicker Lisa Titânio, Argola Coração)
+  dRingLisoClicker: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfugdaj1pret23",
+  argolaCravejada: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mgbh3j19axa8d7",
+  argolaClickerLisa: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfugdaj1pret23",
+  argolaCoracao: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mg4jgqoj03d383",
+  argolaPedrasLateral: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mg2wq7pb8mpse1",
 
-  // 3. PIERCINGS DE UMBIGO & BANANINHAS (Anúncios oficiais Rock Body Piercing: Banana Titânio 2 Pedras, Umbigo 4 Pedras, Meia Flor, Mandala Indiana, Bananinha Lisa)
-  umbigoPontoDeLuz: "https://down-br.img.susercontent.com/file/sg-11134201-7rdx0-m02e81r6madcca",
-  umbigoZirconiaGota: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfktrf23tq0w08",
-  umbigoFlorZirconias: "https://down-br.img.susercontent.com/file/sg-11134201-822ys-mhwzstw8osu831",
-  umbigoRosaceaMandala: "https://down-br.img.susercontent.com/file/sg-11134201-7rdxt-ly08kog6ixy8ab",
-  umbigoEstrelaTripla: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mbomh8kaqx7re7",
-  umbigoEscorpiaoRamo: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8pun597axvm55",
-  umbigoCoracaoColorido: "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lki6bmzdbmltf9",
+  // 3. PIERCINGS DE UMBIGO & BANANINHAS (Anúncios oficiais Loja De Piercing: Banana Titânio 2 Pedras, Umbigo Clicker Zircônias, Umbigo Borboletinha, Banana Aço)
+  umbigoPontoDeLuz: "https://down-br.img.susercontent.com/file/br-11134201-820ld-mqyhx4itoxdzda",
+  umbigoZirconiaGota: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhgww729orup5f",
+  umbigoFlorZirconias: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mj2yontbcr9e69",
+  umbigoRosaceaMandala: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfzy0lfj5tl17c",
+  umbigoEstrelaTripla: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-miw0r7ufsc8x83",
+  umbigoEscorpiaoRamo: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-miizefp5lnnl4f",
+  umbigoCoracaoColorido: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfk7htacfg90f8",
+  umbigoCoracao: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfk7htacfg90f8",
+  umbigoArgolaClick: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfzy0lfj5tl17c",
+  umbigoBorboleta: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mj2yontbcr9e69",
 
-  // 4. TRANSVERSAL & MAMILO (Anúncios oficiais Rock Body Piercing: Transversal Indiano Strass Central, Barbell Mamilo Esférico PVD, Coração PVD)
-  transversalAdornoCentral: "https://down-br.img.susercontent.com/file/sg-11134201-7rdyf-lw34y20y00v688",
-  barbellMamilo: "https://down-br.img.susercontent.com/file/sg-11134201-7rdwk-lxkuhrl6nnnqf0",
-  minibarbellLiso: "https://down-br.img.susercontent.com/file/sg-11134201-7rd42-lwnyw0ic9qsv70",
+  // 4. TRANSVERSAL & MAMILO & FERRADURAS (Anúncios oficiais Loja De Piercing: Barbell Haste Lisa Titânio, Ferradura 2 Zircônias, Ferradura Lisa)
+  transversalAdornoCentral: "https://down-br.img.susercontent.com/file/br-11134207-820mh-mmbtni4u3t3491",
+  barbellMamilo: "https://down-br.img.susercontent.com/file/br-11134207-820mh-mmbtni4u3t3491",
+  minibarbellLiso: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-miu6rhskugoxad",
+  ferraduraZirconia: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mju41zluwo3l56",
+  ferraduraLisa: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfmsz6wfmeww40",
 
-  // 5. CLUSTERS (Anúncios oficiais Rock Body Piercing: Conch Helix Barbell Cluster 5 Zircônias, Mini Cluster Titânio PVD)
-  cluster5Zirconias: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgo-m3642n05jlkm3d",
-  clusterCartilagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rdya-mda5nyv9j67wbf",
+  // 5. CLUSTERS (Anúncios oficiais Loja De Piercing: Cluster 5 Zircônias Rosca Interna, Argola Pedras Lateral)
+  cluster5Zirconias: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mhaw940ar09381",
+  clusterCartilagem: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mg2wq7pb8mpse1",
 
-  // 6. KITS E CONJUNTOS (Anúncios oficiais Rock Body Piercing: Argola Segmento Losango Zircônias, Borboleta Titânio, Minibarbell Bolinha)
-  kit3PontoArgola: "https://down-br.img.susercontent.com/file/sg-11134201-22110-w0ykz3ivsojve4",
-  kit3Borboleta: "https://down-br.img.susercontent.com/file/br-11134207-820m0-mn5k2kwtn7r4b4",
-  kit3DelicadoOuroPrata: "https://down-br.img.susercontent.com/file/sg-11134201-7rd42-lwnyw0ic9qsv70"
+  // 6. KITS E NOSTRIL (Anúncios oficiais Loja De Piercing: Trio Nostril Coração/Estrela/Ponto Luz, Kit 2 Pares Bolinha Aço, Kit Trio Estrela, Nostril Titânio Ponto de Luz)
+  kit3PontoArgola: "https://down-br.img.susercontent.com/file/br-11134207-820lz-mlr9d4d878qvef",
+  kit3Borboleta: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfzurpgn8etgcd",
+  kit3DelicadoOuroPrata: "https://down-br.img.susercontent.com/file/br-11134207-820lw-mr4ovjmre1vp3e",
+  kitTrioEstrela: "https://down-br.img.susercontent.com/file/br-11134207-820m4-mr4qijcvxwxyd1",
+  nostrilPontoLuz: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mit7j03anyf759",
+  nostrilReto: "https://down-br.img.susercontent.com/file/br-11134201-820lg-mqyjzt7szll19d",
+  nostrilZirconia: "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mgfvykscoz5wf5"
 };
 
-// Alias de retrocompatibilidade para garantir integridade absoluta em todo o código
-const IMAGENS_MARINA = IMAGENS_ROCK_BODY;
+// Aliases de retrocompatibilidade para garantir integridade absoluta em todo o código
+const IMAGENS_ROCK_BODY = IMAGENS_LOJA_PIERCING;
+const IMAGENS_MARINA = IMAGENS_LOJA_PIERCING;
 
 const catalogoJoias = [
   // =========================================================================
@@ -379,8 +395,8 @@ const catalogoJoias = [
       materialGrau: "Aço Cirúrgico 316L",
       pedraria: "Tubo polido espelhado"
     },
-    imagemUrl: IMAGENS_MARINA.umbigoCoracaoColorido,
-    imagem: IMAGENS_MARINA.umbigoCoracaoColorido,
+    imagemUrl: IMAGENS_LOJA_PIERCING.argolaCoracao,
+    imagem: IMAGENS_LOJA_PIERCING.argolaCoracao,
     descricao: "Curvatura romântica e minimalista moldada em formato de coração, com abertura por torção suave."
   },
   {
@@ -583,8 +599,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136",
       pedraria: "Microzircônias Cúbicas"
     },
-    imagemUrl: IMAGENS_MARINA.labretLuaEstrelaRamo,
-    imagem: IMAGENS_MARINA.labretLuaEstrelaRamo,
+    imagemUrl: IMAGENS_LOJA_PIERCING.labretEstrela,
+    imagem: IMAGENS_LOJA_PIERCING.labretEstrela,
     descricao: "Motivo estelar cravado com micro-cristais. Traz poesia e encanto celestial à composição auricular."
   },
   {
@@ -603,8 +619,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136",
       pedraria: "Zircônia Lapidação Coração 4mm"
     },
-    imagemUrl: IMAGENS_MARINA.umbigoCoracaoColorido,
-    imagem: IMAGENS_MARINA.umbigoCoracaoColorido,
+    imagemUrl: IMAGENS_LOJA_PIERCING.labretCoracao,
+    imagem: IMAGENS_LOJA_PIERCING.labretCoracao,
     descricao: "Zircônia lapidada em formato de coração montada em suporte seguro de titânio biocompatível."
   },
   {
@@ -783,8 +799,8 @@ const catalogoJoias = [
       materialGrau: "Aço Cirúrgico 316L",
       pedraria: "Metal escultural trabalhado"
     },
-    imagemUrl: IMAGENS_MARINA.labretSerpenteCruz,
-    imagem: IMAGENS_MARINA.labretSerpenteCruz,
+    imagemUrl: IMAGENS_LOJA_PIERCING.labretCobra,
+    imagem: IMAGENS_LOJA_PIERCING.labretCobra,
     descricao: "Silhueta sinuosa da serpente com escamas texturizadas e olhos em micro-cristal."
   },
   {
@@ -803,8 +819,8 @@ const catalogoJoias = [
       materialGrau: "Aço Cirúrgico 316L",
       pedraria: "Aço polido com bordas bisotadas"
     },
-    imagemUrl: IMAGENS_MARINA.labretSerpenteCruz,
-    imagem: IMAGENS_MARINA.labretSerpenteCruz,
+    imagemUrl: IMAGENS_LOJA_PIERCING.labretCruz,
+    imagem: IMAGENS_LOJA_PIERCING.labretCruz,
     descricao: "Cruz minimalista polida em aço de alta durabilidade com rosca precisa e confortável."
   },
   {
@@ -903,8 +919,8 @@ const catalogoJoias = [
       materialGrau: "Aço Cirúrgico 316L",
       pedraria: "Zircônia Coração 3mm"
     },
-    imagemUrl: IMAGENS_MARINA.umbigoCoracaoColorido,
-    imagem: IMAGENS_MARINA.umbigoCoracaoColorido,
+    imagemUrl: IMAGENS_LOJA_PIERCING.labretCoracao,
+    imagem: IMAGENS_LOJA_PIERCING.labretCoracao,
     descricao: "Gema coração montada em aço 316L polido com base plana anti-pressão."
   },
 
@@ -967,8 +983,8 @@ const catalogoJoias = [
       materialGrau: "Aço Cirúrgico 316L",
       pedraria: "Zircônia Coração Lapidação Diamante"
     },
-    imagemUrl: IMAGENS_MARINA.umbigoCoracaoColorido,
-    imagem: IMAGENS_MARINA.umbigoCoracaoColorido,
+    imagemUrl: IMAGENS_LOJA_PIERCING.umbigoCoracao,
+    imagem: IMAGENS_LOJA_PIERCING.umbigoCoracao,
     descricao: "Pêndulo com gema coração facetada em garras de aço cirúrgico de brilho eterno."
   },
   {
@@ -1067,8 +1083,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136",
       pedraria: "Zircônias Navete Lapidadas"
     },
-    imagemUrl: IMAGENS_MARINA.argolaCravejada,
-    imagem: IMAGENS_MARINA.argolaCravejada,
+    imagemUrl: IMAGENS_LOJA_PIERCING.umbigoArgolaClick,
+    imagem: IMAGENS_LOJA_PIERCING.umbigoArgolaClick,
     descricao: "Formato inovador de argola clicker para umbigo adornada com zircônias lapidação navete."
   },
   {
@@ -1107,8 +1123,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136",
       pedraria: "Micro Pavé de Zircônias"
     },
-    imagemUrl: IMAGENS_MARINA.umbigoFlorZirconias,
-    imagem: IMAGENS_MARINA.umbigoFlorZirconias,
+    imagemUrl: IMAGENS_LOJA_PIERCING.umbigoBorboleta,
+    imagem: IMAGENS_LOJA_PIERCING.umbigoBorboleta,
     descricao: "Pêndulo elaborado com borboleta graciosa e delicada flor de zircônias cintilantes."
   },
   {
@@ -1295,8 +1311,8 @@ const catalogoJoias = [
       materialGrau: "Aço Cirúrgico 316L",
       pedraria: "Micro Pavé de Zircônias nos Corações"
     },
-    imagemUrl: IMAGENS_MARINA.umbigoCoracaoColorido,
-    imagem: IMAGENS_MARINA.umbigoCoracaoColorido,
+    imagemUrl: IMAGENS_LOJA_PIERCING.labretCoracao,
+    imagem: IMAGENS_LOJA_PIERCING.labretCoracao,
     descricao: "Ponta estilizada em coração com contorno em micro-cristais cintilantes e haste anatômica."
   },
   {
@@ -1375,8 +1391,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136",
       pedraria: "Zircônias Lapidadas em Coração"
     },
-    imagemUrl: IMAGENS_MARINA.umbigoCoracaoColorido,
-    imagem: IMAGENS_MARINA.umbigoCoracaoColorido,
+    imagemUrl: IMAGENS_LOJA_PIERCING.labretCoracao,
+    imagem: IMAGENS_LOJA_PIERCING.labretCoracao,
     descricao: "Topos em formato de coração em titânio polido espelhado com pedras zircônias facetadas."
   },
   {
@@ -1603,8 +1619,8 @@ const catalogoJoias = [
       materialGrau: "Aço Cirúrgico 316L",
       pedraria: "Zircônia Solitária 1.5mm em Virola Lisa"
     },
-    imagemUrl: IMAGENS_MARINA.labretSolitario,
-    imagem: IMAGENS_MARINA.labretSolitario,
+    imagemUrl: IMAGENS_LOJA_PIERCING.nostrilPontoLuz,
+    imagem: IMAGENS_LOJA_PIERCING.nostrilPontoLuz,
     descricao: "Haste em formato L com zircônia redonda lapidada de 1.5mm cravada em virola lisa."
   },
   {
@@ -1623,8 +1639,8 @@ const catalogoJoias = [
       materialGrau: "Titânio ASTM F-136",
       pedraria: "Microzircônias em Cravação Contínua"
     },
-    imagemUrl: IMAGENS_MARINA.umbigoCoracaoColorido,
-    imagem: IMAGENS_MARINA.umbigoCoracaoColorido,
+    imagemUrl: IMAGENS_LOJA_PIERCING.argolaCoracao,
+    imagem: IMAGENS_LOJA_PIERCING.argolaCoracao,
     descricao: "Argola em forma de coração com contorno inteiramente pavimentado em micro-zircônias brilhantes."
   },
 
@@ -1707,8 +1723,8 @@ const catalogoJoias = [
       materialGrau: "Banho de Ouro 18k sobre Liga Hipoalergênica",
       pedraria: "Zircônias e Estrela Dourada"
     },
-    imagemUrl: IMAGENS_MARINA.kit3DelicadoOuroPrata,
-    imagem: IMAGENS_MARINA.kit3DelicadoOuroPrata,
+    imagemUrl: IMAGENS_LOJA_PIERCING.kitTrioEstrela,
+    imagem: IMAGENS_LOJA_PIERCING.kitTrioEstrela,
     descricao: "Banho de ouro 18k premium sobre liga hipoalergênica com estrelas e zircônias reluzentes."
   },
   {
