@@ -376,12 +376,10 @@ function renderVitrine() {
                alt="${joia.nome} em ${joia.material}" 
                loading="lazy" 
                onerror="this.onerror=null; this.src='https://acdn-us.mitiendanube.com/stores/001/488/287/products/1088-1779538534300-v6qdeuwe-bdab164b389391aef017812278995108-1024-1024.webp';" />
-          <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
-            <span class="badge-metal ${badgeClass}">
-              ${joia.material === 'Titânio' ? 'Titânio ASTM F-136' : joia.material}
-            </span>
-            ${joia.destaque ? '<span class="badge-metal bg-purple-600 text-white">Destaque</span>' : ''}
-          </div>
+          ${joia.destaque ? `
+          <div class="absolute top-3 left-3 z-10">
+            <span class="badge-metal bg-purple-600/90 text-white text-[10px]">Destaque</span>
+          </div>` : ''}
           <button onclick="event.stopPropagation(); abrirQuickView(${joia.id})" 
                   class="absolute bottom-3 right-3 bg-white/95 dark:bg-stone-900/95 text-stone-800 dark:text-stone-200 text-xs px-2.5 py-1.5 rounded-md shadow backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5"
                   title="Visualização Rápida">
@@ -591,6 +589,7 @@ function abrirQuickView(id) {
 
           <!-- Especificações Anatômicas Limpas -->
           <div class="mt-3 p-3 bg-stone-50/70 dark:bg-stone-900/40 rounded-lg border border-stone-200/80 dark:border-stone-800 space-y-1.5 text-xs text-stone-600 dark:text-stone-400">
+            <div><strong class="text-stone-800 dark:text-stone-200">Material / Grau:</strong> ${spec.materialGrau || (joia.material === 'Titânio' ? 'Titânio ASTM F-136 (Grau Implante Biocompatível)' : joia.material)}</div>
             ${spec.tipoFecho ? `<div><strong class="text-stone-800 dark:text-stone-200">Tipo de Fecho:</strong> ${spec.tipoFecho}</div>` : ''}
             ${joia.espessura ? `<div><strong class="text-stone-800 dark:text-stone-200">Calibre:</strong> ${joia.espessura}</div>` : ''}
             ${joia.diametro ? `<div><strong class="text-stone-800 dark:text-stone-200">Dimensões:</strong> ${joia.diametro}</div>` : ''}
