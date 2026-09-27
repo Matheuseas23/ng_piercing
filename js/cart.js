@@ -219,30 +219,34 @@ class ShoppingCart {
     const appointmentRequested = checkbox ? checkbox.checked : this.includeAppointment;
 
     let itemsText = '';
-    this.cart.forEach(item => {
-      const corStr = item.cor ? ` • Acabamento: ${item.cor}` : '';
-      const acab = item.acabamento ? ` (${item.acabamento})` : '';
-      itemsText += `• ${item.quantidade}x ${item.nome} [${item.material}${corStr}${acab}] — ${formatarPreco(item.preco * item.quantidade)}\n`;
+    this.cart.forEach((item, index) => {
+      const corStr = item.cor ? ` (Cor: ${item.cor})` : '';
+      const precoTotalItem = formatarPreco(item.preco * item.quantidade);
+      const precoUnit = item.quantidade > 1 ? ` [${formatarPreco(item.preco)} cada]` : '';
+      
+      itemsText += `*${index + 1}. ${item.nome}*${corStr}\n`;
+      itemsText += `   • Quantidade: ${item.quantidade}${precoUnit}\n`;
+      itemsText += `   • Valor: ${precoTotalItem}\n`;
+      if (item.imagem) {
+        itemsText += `   • Foto da peça: ${item.imagem}\n`;
+      }
+      itemsText += `\n`;
     });
 
-    const subtotalText = formatarPreco(this.getSubtotal());
-    const appointmentText = appointmentRequested
-      ? '✨ *Sim, desejo agendar colocação/perfuração no estúdio* (Capão Redondo / Zona Sul - SP com hora marcada)'
-      : '📦 *Apenas compra da joia avulsa com embalagem protetora*';
+    const totalText = formatarPreco(this.getSubtotal());
 
     const message = 
-`✨ *NOVO PEDIDO — NG PIERCING JOIAS* ✨
-────────────────────────────────
-Olá! Gostaria de encomendar as seguintes joias:
+`🛍️ *NOVO PEDIDO — NG PIERCING JOIAS*
+───────────────────────────
+Olá! Gostaria de comprar as seguintes joias:
 
-${itemsText}
-────────────────────────────────
-💎 *Subtotal das Joias:* ${subtotalText}
-⚠️ *AVISO:* VALOR DA PEÇA AVULSA. PERFURAÇÃO NÃO INCLUSA (PROCEDIMENTO REALIZADO À PARTE NO ESTÚDIO EM SP COM HORA MARCADA).
-📍 *Agendamento no Estúdio:* 
-${appointmentText}
+${itemsText.trim()}
 
-Gostaria de saber as opções de pagamento e confirmar o pedido! Obrigado(a).`;
+───────────────────────────
+💰 *VALOR TOTAL DAS JOIAS: ${totalText}*
+───────────────────────────
+
+Por favor, pode me passar a chave PIX e calcular o valor do frete para o meu envio? Obrigado(a)!`;
 
     const encoded = encodeURIComponent(message);
     const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encoded}`;
